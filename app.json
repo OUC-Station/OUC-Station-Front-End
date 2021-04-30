@@ -1,0 +1,40 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/center/center",
+    "pages/map/map",
+    "pages/logs/logs"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle":"black"
+  },
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图导览",
+        "iconPath": "images/map.png",
+        "selectedIconPath": "images/map-selected.png"
+      },
+      {
+        "pagePath": "pages/index/index",
+        "text": "活动中心",
+        "iconPath": "images/activity.png",
+        "selectedIconPath": "images/activity-selected.png"
+      },
+      {
+        "pagePath": "pages/center/center",
+        "text": "个人中心",
+        "iconPath": "images/person.png",
+        "selectedIconPath": "images/person-selected.png"
+      }
+    ],
+    "color": "#c3b7b0",
+    "selectedColor": "#6a3906",
+    "backgroundColor": "#FFFFFF"
+  }
+}
