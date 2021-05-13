@@ -1,0 +1,65 @@
+<!--pages/forumdetail/forumdetail.wxml-->
+<view class="container">
+  <van-dialog id="van-dialog" />
+<view class="all">
+<view class="top">
+<view class="lt">
+<image src="{{ avatarUrl }}" style="width:100rpx;height:100rpx;"></image>
+</view>
+<view class="rt">
+<text class="name">{{name}}</text>
+<text wx:if="{{ identity!='admin' && permit==0}}" class="time">{{time}}</text>
+<view wx:if="{{ identity=='admin' || permit==1}}" class="time" bindtap="deleteInfo">{{time}} · 删除</view>
+</view>
+</view>
+<view class="content">
+<text selectable="true">{{content}}</text>
+</view>
+<view class="div-line"></view>
+<view class="foot">
+</view>
+
+
+<!-- start 输入框 -->
+<view class='inputBottom' style='bottom:{{inputBottom}}px'>
+    <input type='text' class='textInput' name="inputText" value='{{inputText}}' placeholder-class='textInputPlaceHolder' placeholder='写点评论...' bindinput='getInputText'  bindfocus="focus" bindblur="blur" bindconfirm='submit' adjust-position='{{false}}'></input>
+    <view bindtap='submit'  wx:if="{{isNull}}" class='submit'>  
+      <image class="foot-img" src='../../images/sent.png' mode="aspectFit">
+      </image>
+</view>
+</view>
+<!-- end 输入框 -->
+
+</view>
+
+
+<view class="tip">
+  <text class="tip-text">评论 {{nowcount}}</text>
+</view>
+
+
+<view class="comment">
+<block wx:for="{{lists}}" wx:key="index" > 
+<view class="buttom">
+<view class="div-line1"></view>
+<view class="top1">
+<view class="lt1">
+<image src="{{ item.avatarUrl }}" style="width:90rpx;height:90rpx;"></image>
+</view>
+<view class="rt1">
+<text class="name1">{{item.name}}</text>
+<view class="content1">{{item.content}}</view>
+<view class="rt1-buttom">
+<view wx:if="{{ identity!='admin' && item.permit==0}}" class="time1">{{item.time}} · 回复</view>
+<view wx:if="{{ identity=='admin' || item.permit==1}}" class="time1" bindtap="deletePL" data-id="{{item.id}}">{{item.time}} · 删除</view>
+
+</view>
+</view>
+</view>
+</view>
+</block>
+</view>
+
+
+
+</view>

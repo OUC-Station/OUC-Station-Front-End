@@ -1,8 +1,18 @@
 {
   "pages":[
+    "pages/empower/empower",
     "pages/index/index",
+   
+    "pages/forum/forum",
+    "pages/forumdetail/forumdetail",
+    
     "pages/center/center",
+    "pages/phone/phone",
     "pages/map/map",
+    
+    
+    "pages/instruction/instruction",
+    "pages/feedback/feedback",
     "pages/logs/logs"
   ],
   "window":{
@@ -16,7 +26,7 @@
     "list": [
       {
         "pagePath": "pages/map/map",
-        "text": "地图导览",
+        "text": "校园导览",
         "iconPath": "images/map.png",
         "selectedIconPath": "images/map-selected.png"
       },

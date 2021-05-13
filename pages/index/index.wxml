@@ -1,0 +1,15 @@
+<!-- swiper轮播 -->
+<view class="swiperarea">
+<swiper class="slider"
+indicator-dots="{{swiper.indicatorDots}}"
+autoplay="{{swiper.autoplay}}"
+interval="{{swiper.interval}}"
+circular="{{swiper.circular}}"
+>
+<block wx:for="{{swiper.img}}" wx:key="*this">
+<swiper-item class="slider-item">
+  <image class="slider-item-img" src="{{item.src}}"></image>
+</swiper-item>
+</block>
+</swiper>
+</view>

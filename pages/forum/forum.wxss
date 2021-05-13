@@ -1,0 +1,101 @@
+/* pages/forum/forum.wxss */
+page{
+  background-color: #f7f7f7;
+}
+/*按钮样式*/
+.container{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.add-button{
+  font-size: 39rpx;
+  position: fixed;
+  right: 30rpx;
+  bottom: 50rpx;
+  border-radius: 30rem;
+  height: 3.6rem;
+  width: 3.6rem;
+  background-color: #50a8ff;
+  display: flex;
+  justify-content: center;
+  align-items:center ;
+  box-shadow:2px 2px 10px #3f3e3e;
+}
+.add-button::after{
+  border: none;
+}
+.add-img{
+  height: 1.6rem;
+  width: 1.6rem;
+}
+
+/*卡片样式*/
+.all{
+  background-color: #ffffff;
+  margin-bottom: 20rpx;
+  box-shadow: 2px 2px 15px#e2e1e1;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-left: 20rpx;
+  padding-top: 30rpx;
+}
+.lt {
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 20rpx;
+}
+.rt {
+   margin-left: 30rpx;
+}
+.name{
+  color:#333333;
+  font-weight: bold;
+  font-size: 32rpx;
+  display: block;
+}
+.time{
+  font-size: 24rpx;
+  color: #777777;
+  display: block;
+}
+.content{
+  padding-left: 40rpx;
+  padding-right: 30rpx;
+  border-bottom: 1px #777777;
+  margin-top: 30rpx;
+  margin-bottom: 20rpx;
+  color: #333333;
+  font-size: 32rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.div-line{
+  border-bottom: 1rpx solid rgb(236, 233, 233);
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.foot{
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  display: flex;
+  margin-left: 50rpx;
+  align-items: center;
+}
+.foot-img{
+  width: 48rpx;
+  height:48rpx;
+  margin-right: 8rpx;
+}
+.foot-num{
+  width: 48rpx;
+  height:48rpx;
+  color: #999999;
+  font-size: 28rpx;
+}

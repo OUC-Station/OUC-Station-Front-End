@@ -1,0 +1,170 @@
+page{
+  background-color: #f7f7f7;
+}
+/*按钮样式*/
+.container{
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+/*卡片样式*/
+.all{
+  background-color: #ffffff;
+  margin-bottom: 1 rpx;
+  box-shadow: 2px 2px 15px#e2e1e1;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  padding-left: 10rpx;
+  padding-top: 30rpx;
+}
+.lt {
+  width: 100rpx;
+  height: 100rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 10rpx;
+}
+.rt {
+   margin-left: 20rpx;
+}
+.name{
+  color:#333333;
+  font-weight: bold;
+  font-size: 35rpx;
+  display: block;
+}
+.time{
+  font-size: 25rpx;
+  color: #777777;
+  display: block;
+}
+.content{
+  margin-left: auto;
+  margin-right: auto;
+  width: 680rpx;
+  border-bottom: 1px #777777;
+  margin-top: 25rpx;
+  margin-bottom: 18rpx;
+  color: #333333;
+  font-size: 30rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+.div-line{
+  border-bottom: 1rpx solid rgb(236, 233, 233);
+  margin-left: 18rpx;
+  margin-right: 18rpx;
+}
+.foot{
+   height: 50rpx;
+}
+
+.tip{
+   height: 80rpx;
+   margin-top: 18rpx;
+   background-color: #ffffff;
+   display: flex;
+   align-items: center;
+}
+.tip-text{
+  color: #fb6570;
+  font-weight: bold;
+  margin-left: 30rpx;
+}
+/*底部评论言样式*/
+.comment{
+  margin-bottom: 120rpx;
+}
+.buttom{
+  width: 100%;
+  background-color: #ffffff;
+}
+.div-line1{
+  border-bottom: 1rpx solid rgb(236, 233, 233);
+  margin-left: 15rpx;
+  margin-right: 15rpx;
+}
+
+.top1{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  padding-left: 20rpx;
+  padding-top: 30rpx;
+  padding-bottom: 30rpx;
+}
+.lt1{
+  width: 90rpx;
+  height: 90rpx;
+  overflow: hidden;
+  border-radius: 50%;
+  margin-left: 20rpx;
+}
+.rt1{
+  margin-top: 5rpx;
+   margin-left: 30rpx;
+}
+.name1{
+  color:#333333;
+  font-weight: bold;
+  font-size: 30rpx;
+  display: block;
+}
+.content1{
+  margin: 5rpx;
+  width: 560rpx;
+  font-size: 26rpx;
+  color: #575656;
+  display: block;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+rt1-buttom{
+    display: flex;
+}
+.time1{
+  float: left;
+  font-size: 22rpx;
+  color: #666666;
+}
+/*评论框样式*/
+.inputBottom{
+   border-top: 1.5rpx solid #dddddd;
+   width: 100%;
+   position: fixed;
+   left: 0rpx;
+   bottom: 0rpx;
+   background: #fff;
+   height: 100rpx;
+   box-sizing: border-box;
+   padding: 18rpx 10rpx;
+}
+.inputBottom .textInput{
+   display: inline-block;
+   width: 80%;
+}
+   
+.inputBottom .textInputPlaceHolder{
+   font-size: 32rpx;
+   padding-left: 20rpx;
+}
+   
+.inputBottom .submit{
+   text-align: center;
+   float: right;
+   margin-right: 20rpx;
+}
+.foot-img{
+  width: 55rpx;
+  height: 55rpx;
+}
+   
+  
+
+
+
+

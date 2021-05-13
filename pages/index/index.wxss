@@ -1,0 +1,23 @@
+page{
+  background-color: #f7f7f7;
+}
+/* swiper轮播组件 */
+.swiperarea{
+  margin-top: 30rpx;
+}
+swiper{
+  margin: 0 auto;
+  text-align: center;
+  width: 680rpx;
+  height: 400rpx;
+  border-radius: 20rpx;
+  overflow: hidden;
+  transform: translateY(0);
+}
+.slider-item{
+  width:100%;
+}
+.slider-item-img{
+  width: 100%;
+  height: 100%;
+}

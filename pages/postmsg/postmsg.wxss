@@ -1,0 +1,40 @@
+page{
+  background:#eeeeee;
+}
+button[disabled] {
+    color: rgb(240, 240, 240) !important;
+    background: #8c8d8d4d !important;
+    border-color: #8c8d8d4d !important;
+}
+.top{
+  background-color: #ffffff;
+}
+.input{
+  padding: 15px;
+  width: 93%;
+}
+.btn-area{
+  display: block;
+  margin-bottom: 50rpx;
+  width: 100%;
+}
+.loginBtn{
+  margin-top: 100rpx;
+  align-items: center;
+  text-align: center;
+  width: 85%;
+  border-radius: 10rpx;
+  color: #fff;
+  background-color: #f68e95;
+  font-size: 32rpx;
+  letter-spacing: 5rpx;
+  border: none;
+}
+.loginBtn::after{
+  border: none;
+}
+.loginBtn-hover{
+  position: relative;
+  top: 3rpx;
+  box-shadow: 0px 0px 10px #bbbec4 inset;
+}

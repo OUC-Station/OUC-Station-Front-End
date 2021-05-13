@@ -1,0 +1,31 @@
+<!--pages/forum/forum.wxml-->
+<view class="container">
+
+<block wx:for="{{lists}}" wx:key="index" > 
+<view class="all" bindtap="toDetail" data-item='{{lists[index]}}'>
+
+<view class="top">
+<view class="lt">
+<image src="{{ item.avatarUrl }}" style="width:100rpx;height:100rpx;"></image>
+</view>
+<view class="rt">
+<text class="name">{{item.name}}</text>
+<text class="time">{{item.time}}</text>
+</view>
+
+</view>
+
+<view class="content">{{item.content}}</view>
+<view class="div-line"></view>
+<view class="foot">
+  <image class="foot-img" src='../../images/comment.png' mode="aspectFit"></image>
+  <view class="foot-num">{{item.count}}</view>
+</view>
+
+</view>
+</block>
+
+<button  class="add-button"  bindtap="toPost">
+<image class="add-img" src='../../images/post.png' mode="aspectFit"></image>
+</button>
+</view>

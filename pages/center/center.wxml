@@ -1,2 +1,69 @@
 <!--pages/center/center.wxml-->
-<text>pages/center/center.wxml</text>
+<image class="login-box" src="https://i.loli.net/2021/04/30/bkwCxiOsEhKl9NQ.png" ></image>
+<view wx:if="{{ isLogin }}">
+<view class="userImage1">
+  <image src="../../images/1.jpg"></image>
+  <view class="nickname">酷盖王一博</view>
+<view class="btn">
+  <van-button 
+  custom-class="logout"
+  color="rgb(255,251,240)"
+  bind:click="logout"
+  >退出</van-button>
+</view> 
+</view> 
+</view>
+<view wx:if="{{ !isLogin }}">
+  <view class="userImage2">
+  <image src="../../images/default.png"></image>
+<view class="btn">
+  <van-button 
+  custom-class="logout"
+  color="rgb(255,251,240)"
+  bind:click="login"
+  >点击登录</van-button>
+</view> 
+</view> 
+</view>
+
+
+
+<view class="foot1">
+<view class="lists" hover-class="list-hover" bindtap="gotoForum" >
+<view class="img">
+  <image src="../../images/forum.png" style="width:80rpx;height:80rpx;"></image>
+  </view>
+ <view class="font">交流论坛</view>
+</view>
+
+
+<view class="lists" hover-class="list-hover" bindtap="gotoPhone" >
+<view class="img">
+  <image src="../../images/phone.png" style="width:80rpx;height:80rpx;"></image>
+  </view>
+ <view class="font">电话查询</view>
+</view>
+</view>
+
+
+
+<view class="foot2">
+  <view class="lists" hover-class="list-hover" bindtap="gotoInstruction" >
+<view class="img">
+  <image src="../../images/instruction.png" style="width:80rpx;height:80rpx;"></image>
+  </view>
+ <view class="font">使用帮助</view>
+</view>
+
+<view class="lists" hover-class="list-hover" bindtap="gotoFeedback" >
+<view class="img">
+  <image src="../../images/feedback.png" style="width:80rpx;height:80rpx;"></image>
+  </view>
+ <view class="font">意见反馈</view>
+</view>
+
+
+</view>
+
+
+

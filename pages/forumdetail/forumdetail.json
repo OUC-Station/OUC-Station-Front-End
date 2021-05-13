@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
+  "navigationBarBackgroundColor": "#fb6570",
+  "navigationBarTextStyle": "white",
+  "navigationBarTitleText": "评论详情"
+}

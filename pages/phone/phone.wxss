@@ -1,0 +1,17 @@
+/* pages/phone/phone.wxss */
+page{
+  background: #91ccee;
+}
+.login-box{
+  width: 100%;
+}
+.phonearea{
+  margin-left: 30rpx;
+  margin-right: 30rpx;
+}
+.custom-class{
+  margin-bottom: 20rpx;
+}
+.custom-icon{
+  margin-left: 20rpx;
+}

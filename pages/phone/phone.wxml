@@ -1,0 +1,88 @@
+<image class="login-box" src="https://i.loli.net/2021/05/02/mflRJj31Hhu4sFA.png" mode="aspectFit" style="height:320rpx"></image>
+<view class="phonearea">
+  <van-dialog id="van-dialog" />
+<van-collapse
+  value="{{ activeNames }}"
+  accordion value="{{ activeName }}" 
+  bind:change="onChange"
+>
+  <van-collapse-item title="最常用到" name="1" custom-class="custom-class" border="{{ false }}">
+    <view wx:for="{{lists}}" wx:key="index" > 
+      <view class="phone-items" bindtap="toCall" data-item='{{lists[index]}}'>
+        <van-cell-group>
+        <van-cell size="large" center title="{{item.name}}" value="{{item.phone}}">
+          <van-icon slot="right-icon" name="phone-o" class="custom-icon" />
+        </van-cell>
+      </van-cell-group>
+    </view>
+    </view>
+  </van-collapse-item>
+
+
+  <van-collapse-item title="后勤部" name="2" custom-class="custom-class" border="{{ false }}" border="{{ false }}">
+    <view wx:for="{{lists}}" wx:key="index" > 
+      <view class="phone-items" bindtap="toCall" data-item='{{lists[index]}}'>
+        <van-cell-group>
+        <van-cell size="large" center title="{{item.name}}" value="{{item.phone}}">
+          <van-icon slot="right-icon" name="phone-o" class="custom-icon" />
+        </van-cell>
+      </van-cell-group>
+    </view>
+    </view>
+  </van-collapse-item>
+
+
+  <van-collapse-item title="招生办" name="3" custom-class="custom-class" border="{{ false }}" border="{{ false }}">
+    <block wx:for="{{lists}}" wx:key="index" > 
+      <view class="phone-items" bindtap="toCall" data-item='{{lists[index]}}'>
+        <van-cell-group>
+        <van-cell size="large" center title="{{item.name}}" value="{{item.phone}}">
+          <van-icon slot="right-icon" name="phone-o" class="custom-icon" />
+        </van-cell>
+      </van-cell-group>
+    </view>
+    </block>
+  </van-collapse-item>
+
+
+  <van-collapse-item title="教务部" name="4" custom-class="custom-class" border="{{ false }}">
+    <view wx:for="{{lists}}" wx:key="index"> 
+      <view class="phone-items" bindtap="toCall" data-item='{{lists[index]}}'>
+        <van-cell-group>
+        <van-cell size="large" center title="{{item.name}}" value="{{item.phone}}">
+          <van-icon slot="right-icon" name="phone-o" class="custom-icon" />
+        </van-cell>
+      </van-cell-group>
+    </view>
+    </view>
+  </van-collapse-item>
+
+
+  <van-collapse-item title="学生部" name="5" custom-class="custom-class" border="{{ false }}">
+    <view wx:for="{{lists}}" wx:key="index"> 
+      <view class="phone-items" bindtap="toCall" data-item='{{lists[index]}}'>
+        <van-cell-group>
+        <van-cell size="large" center title="{{item.name}}" value="{{item.phone}}">
+          <van-icon slot="right-icon" name="phone-o" class="custom-icon" />
+        </van-cell>
+      </van-cell-group>
+    </view>
+    </view>
+  </van-collapse-item>
+
+
+  <van-collapse-item title="教务秘书" name="6" custom-class="custom-class" border="{{ false }}">
+    <view wx:for="{{lists}}" wx:key="index"> 
+      <view class="phone-items" bindtap="toCall" data-item='{{lists[index]}}'>
+        <van-cell-group>
+        <van-cell size="large" center title="{{item.name}}" value="{{item.phone}}">
+          <van-icon slot="right-icon" name="phone-o" class="custom-icon" />
+        </van-cell>
+      </van-cell-group>
+    </view>
+    </view>
+  </van-collapse-item>
+
+
+</van-collapse>
+</view>
