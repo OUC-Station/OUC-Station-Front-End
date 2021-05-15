@@ -1,7 +1,6 @@
 // index.js
-// 获取应用实例
 const app = getApp()
-
+var url = app.globalData.urlPath;
 Page({
   data: {
     swiper:{
@@ -19,6 +18,19 @@ Page({
  
   onLoad() {
     
+     var that = this;
+     wx.request({
+          url: url+'/api/activity/get_activities_list',
+          method: "GET",
+          header: {
+             "Content-Type":"application/json;charset=UTF-8" 
+          },
+          data: {},
+          success: function (res) {
+               console.log("活动列表数据：",res.data)
+         },
+        })
+      
   }
   
 })

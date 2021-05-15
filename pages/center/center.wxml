@@ -2,8 +2,8 @@
 <image class="login-box" src="https://i.loli.net/2021/04/30/bkwCxiOsEhKl9NQ.png" ></image>
 <view wx:if="{{ isLogin }}">
 <view class="userImage1">
-  <image src="../../images/1.jpg"></image>
-  <view class="nickname">酷盖王一博</view>
+  <image src="{{ avatar }}"></image>
+  <view class="nickname">{{ nick_name }}</view>
 <view class="btn">
   <van-button 
   custom-class="logout"
@@ -21,7 +21,7 @@
   custom-class="logout"
   color="rgb(255,251,240)"
   bind:click="login"
-  >点击登录</van-button>
+  >登录</van-button>
 </view> 
 </view> 
 </view>

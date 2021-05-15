@@ -1,8 +1,7 @@
 {
   "pages":[
-    "pages/empower/empower",
     "pages/index/index",
-   
+    "pages/empower/empower",
     "pages/forum/forum",
     "pages/forumdetail/forumdetail",
     
