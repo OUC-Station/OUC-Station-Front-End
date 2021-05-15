@@ -1,6 +1,18 @@
 // app.js
 App({
   onLaunch() {
+     // 获取手机系统信息，用户自定义导航栏按钮
+     wx.getSystemInfo({
+      success: res => {
+         console.log("导航高度",res)
+         this.globalData.windowWidth = res.windowWidth
+      }
+    })
+   let menuButtonObject = wx.getMenuButtonBoundingClientRect();
+   console.log("menuButtonObject",menuButtonObject)
+   this.globalData.top = menuButtonObject.top;
+
+
     var that = this;
     var cookie = wx.getStorageSync("cookie")
     if(cookie){//有cookie字段
@@ -122,6 +134,8 @@ App({
   },
 
   globalData: {
+    windowWidth: null, //手机屏幕宽度
+    top:null, //胶囊按钮到顶部的距离
     is_login: false,
     avatar: null,
     nick_name: null,

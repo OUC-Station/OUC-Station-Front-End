@@ -1,0 +1,16 @@
+<!--pages/activitydetail/activitydetail.wxml-->
+<view class="top" style="height:{{ top }}px"></view>
+<view class="dimback">
+<image class="backarrow" src="../../images/back.png" mode="aspectFit" bindtap="naviback"></image>
+<image class="dim" src="{{ cover }}" ></image>
+</view>
+
+<view class="center">
+<view class="title">{{ title }}</view>
+<view class="time1">发布时间：{{ create_time }}</view>
+<view class="time2">活动开始时间：{{ start_time }}</view>
+</view>
+
+<view class="content">
+<rich-text nodes="{{ content }}"></rich-text>
+</view>

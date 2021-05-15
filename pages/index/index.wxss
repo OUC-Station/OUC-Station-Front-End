@@ -1,5 +1,5 @@
 page{
-  background-color: #f7f7f7;
+  background-color: #ffffff;
 }
 /* swiper轮播组件 */
 .swiperarea{
@@ -21,3 +21,78 @@ swiper{
   width: 100%;
   height: 100%;
 }
+
+
+
+
+
+
+
+
+
+
+/* 底下活动列表那里 */
+.activities{
+  width: 100%;
+  height: auto;
+  background: #ffffff;
+  margin-top: 100rpx;
+  margin-bottom: 40rpx;
+}
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 20rpx;
+  overflow: hidden;
+}
+
+.item .lt {
+  float: left;
+}
+
+.item .lt image {
+  border-radius: 16rpx;
+  width: 285rpx;
+  height: 180rpx;
+  margin: 20rpx;
+}
+.item .rt {
+  float: left;
+  width: 355rpx;
+  height: 180rpx;
+  margin-left: 15rpx;
+  position: relative;
+}
+.titleform{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+  width: 100%;
+  position: relative;
+}
+.titleform .title {
+  color:#333333;
+  font-size: 36rpx;
+  line-height: 48rpx;
+  height: 48rpx;
+  width: 466rpx;
+  word-break: break-all;/*允许在单词内换行*/ 
+  text-overflow: -o-ellipsis-lastline;/*css3中webkit内核提供的一个方法类似 ellipsis*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;/*自适应盒子*/
+  -webkit-line-clamp: 1;/*此处为1行,如果是两行就改成2*/
+  -webkit-box-orient: vertical;
+}
+
+.item .rt .time{
+  margin-top: 8rpx;
+  color:#666666;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 26rpx;
+}
+
+

@@ -13,3 +13,21 @@ circular="{{swiper.circular}}"
 </block>
 </swiper>
 </view>
+
+
+
+
+    <view class="activities">
+        <view class="item bdbt" wx:for="{{ lists }}" wx:key="index"  bindtap="toDetail" data-id='{{ item.activity_id }}'>
+                <view class="lt" >
+                    <image src="{{item.cover}}" />
+                </view>
+                <view class="rt">
+                    <view class="titleform"><view class="title">{{item.title}}</view></view>
+                    <view class="time">
+                        <text>{{item.start_time}}</text>
+                    </view>
+                </view>
+        </view>
+    
+    </view>
