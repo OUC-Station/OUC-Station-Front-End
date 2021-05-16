@@ -11,6 +11,7 @@ Page({
    */
   data: {
     lists: [],
+    tipShow: true,
     lastpage: 0
   },
 
@@ -35,7 +36,10 @@ Page({
     /**
      * 生命周期函数--监听页面显示
      */
-    onLoad: function (options){
+    onShow: function (){
+      this.setData({
+        tipShow: true
+      })
       page = 1;
       this.setData({
         lists: []
@@ -46,9 +50,6 @@ Page({
 
     loadData: function(page){
       var that = this;
-      wx.showLoading({
-        title: '数据加载中...',
-      })
       var oldlists = that.data.lists; // 获取上次加载的数据
       console.log("oldlists",oldlists)
       wx.request({
@@ -72,11 +73,11 @@ Page({
                     lists: newlists,
                     lastpage: res.data.data.total
                   });
-                  wx.hideLoading()
                  },1000)
           },
          })
     },
+
     onReachBottom: function(){
       page++;
       if(this.data.lastpage >= page){
@@ -87,13 +88,16 @@ Page({
           icon: 'none',
           duration: 1000
         })
+        this.setData({
+          tipShow: false
+        })
       }
     },
  //下拉刷新
   onPullDownRefresh: function () {
     var page=getCurrentPages().pop();//得到这个页面对象
  
-    page.onLoad();//调用页面的onLoad()方法进行刷新页面
+    page.onShow();//调用页面的onLoad()方法进行刷新页面
     wx.stopPullDownRefresh() //刷新成功后停止下拉刷新
   },
 

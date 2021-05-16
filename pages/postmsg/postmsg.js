@@ -80,7 +80,9 @@ Page({
               })
               
             }
-          
+            that.setData({
+              inputText: ''
+            })
             wx.navigateBack({
               success: function(){
                 let page = getCurrentPages().pop(); //跳转页面成功之后

@@ -95,4 +95,8 @@ swiper{
   font-size: 26rpx;
 }
 
-
+.loadtip{
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
+}

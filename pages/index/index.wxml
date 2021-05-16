@@ -30,4 +30,8 @@ circular="{{swiper.circular}}"
                 </view>
         </view>
     
+        <view class="loadtip" wx:if="{{ tipShow }}">
+  <van-loading size="12px">加载中...</van-loading>
+</view>
+
     </view>

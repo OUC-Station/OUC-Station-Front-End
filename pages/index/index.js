@@ -18,7 +18,8 @@ Page({
     ],
     },
     lists:[],
-    lastpage: 0
+    lastpage: 0,
+    tipShow: true
   },
  
  //点击跳转到详情页
@@ -31,15 +32,15 @@ Page({
 },
 
   onLoad() {
+    this.setData({
+      tipShow: true
+    })
      var that = this;
      that.loadData(page);
   },
 
   loadData: function(page){
     var that = this;
-    wx.showLoading({
-      title: '数据加载中...',
-    })
     var oldlists = that.data.lists; // 获取上次加载的数据
     console.log("oldlists",oldlists)
     wx.request({
@@ -61,17 +62,11 @@ Page({
                  listall[i].start_time = moment(listall[i].start_time).calendar();
                }
                var newlists = oldlists.concat(listall);
-               /*
-               var newlists = [];
-               for(var i=0; i<listall.length; i++){
-                  newlists[i] = oldlists.concat(listall[i])
-               }*/
                setTimeout(() => {
                 that.setData({
                   lists: newlists,
                   lastpage: res.data.data.total
                 });
-                wx.hideLoading()
                },1000)
         },
        })
@@ -81,6 +76,9 @@ Page({
     if(this.data.lastpage >= page){
       this.loadData(page);
     }else{
+      this.setData({
+        tipShow: false
+      })
       wx.showToast({
         title: '没有更多数据啦~',
         icon: 'none',

@@ -1,12 +1,13 @@
 {
   "pages":[
-    "pages/forum/forum",
-    "pages/center/center",
     "pages/index/index",
+    "pages/forum/forum",
     
-   
-    "pages/postmsg/postmsg",
     "pages/forumdetail/forumdetail",
+  
+    "pages/center/center",
+    "pages/postmsg/postmsg",
+    
     "pages/activitydetail/activitydetail",
    
     "pages/phone/phone",

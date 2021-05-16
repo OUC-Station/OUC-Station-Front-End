@@ -32,7 +32,7 @@ page{
 .all{
   width: 100%;
   background-color: #ffffff;
-  margin-bottom: 20rpx;
+  margin-bottom: 30rpx;
   box-shadow: 2px 2px 15px#e2e1e1;
 }
 .top{
@@ -98,4 +98,9 @@ page{
   height:48rpx;
   color: #999999;
   font-size: 28rpx;
+}
+.loadtip{
+  text-align: center;
+  margin-top: 20rpx;
+  margin-bottom: 20rpx;
 }

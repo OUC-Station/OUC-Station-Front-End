@@ -141,6 +141,7 @@ App({
     nick_name: null,
     openId: null,
     code: null,
-    urlPath:'https://weparallelines.top'
+    urlPath:'https://weparallelines.top',
+    topic_id: null
   }
 })

@@ -20,12 +20,20 @@
 
 
 <!-- start 输入框 -->
-<view class='inputBottom' style='bottom:{{inputBottom}}px'>
+<view class='inputBottom' style='bottom:{{inputBottom}}px; height: {{ ipheight }}px;'>
     <input type='text' class='textInput' name="inputText" value='{{inputText}}' placeholder-class='textInputPlaceHolder' placeholder='写点评论...' bindinput='getInputText'  bindfocus="focus" bindblur="blur" bindconfirm='submit' adjust-position='{{false}}'></input>
-    <view bindtap='submit'  wx:if="{{isNull}}" class='submit'>  
+    <view bindtap='submit'  wx:if="{{isNull}}" class='submit' style="height: {{ theight }}px; line-height: {{ theight }}px;">  
       <image class="foot-img" src='../../images/sent.png' mode="aspectFit">
       </image>
 </view>
+<van-cell-group wx:if="{{isShow}}">
+<view class="switch-btn">
+<i-switch value="{{switch1}}" size="large" bind:change="onChange" slot="footer">
+            <view slot="open">实名</view>
+            <view slot="close">匿名</view>
+</i-switch>
+</view>
+</van-cell-group>
 </view>
 <!-- end 输入框 -->
 
@@ -36,20 +44,19 @@
   <text class="tip-text">评论 {{nowcount}}</text>
 </view>
 
-
 <view class="comment">
 <block wx:for="{{lists}}" wx:key="index" > 
 <view class="buttom">
 <view class="div-line1"></view>
 <view class="top1">
 <view class="lt1">
-<image src="{{ item.avatarUrl }}" style="width:90rpx;height:90rpx;"></image>
+<image src="{{ item.account_avatar?item.account_avatar:'../../images/default.png'}}" style="width:90rpx;height:90rpx;"></image>
 </view>
 <view class="rt1">
-<text class="name1">{{item.name}}</text>
+<text class="name1">{{item.account_nickname}}</text>
 <view class="content1">{{item.content}}</view>
 <view class="rt1-buttom">
-<view class="time1">{{item.time}} · 回复</view>
+<view class="time1">{{item.create_time}} · 回复</view>
 </view>
 </view>
 </view>

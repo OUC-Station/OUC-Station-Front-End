@@ -1,8 +1,10 @@
 {
   "usingComponents": {
-    "van-dialog": "@vant/weapp/dialog/index"
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-cell-group": "@vant/weapp/cell-group/index",
+    "i-switch": "../iview-weapp/dist/switch/index"
   },
-  "navigationBarBackgroundColor": "#fb6570",
+  "navigationBarBackgroundColor": "#a0887e",
   "navigationBarTextStyle": "white",
   "navigationBarTitleText": "评论详情"
 }

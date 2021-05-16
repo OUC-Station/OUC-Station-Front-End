@@ -72,7 +72,7 @@ page{
    align-items: center;
 }
 .tip-text{
-  color: #fb6570;
+  color: #a0887e;
   font-weight: bold;
   margin-left: 30rpx;
 }
@@ -134,37 +134,42 @@ rt1-buttom{
 }
 /*评论框样式*/
 .inputBottom{
-   border-top: 1.5rpx solid #dddddd;
+   border-top: 1px solid #dddddd;
    width: 100%;
    position: fixed;
-   left: 0rpx;
-   bottom: 0rpx;
+   left: 0;
+   bottom: 0;
    background: #fff;
-   height: 100rpx;
    box-sizing: border-box;
-   padding: 18rpx 10rpx;
+   padding: 9px 5px;
 }
 .inputBottom .textInput{
    display: inline-block;
    width: 80%;
+   height: 25px;
+   padding-left: 10px;
 }
    
 .inputBottom .textInputPlaceHolder{
-   font-size: 32rpx;
-   padding-left: 20rpx;
+   font-size: 16px;
+   padding-left: 10px;
 }
    
 .inputBottom .submit{
-   text-align: center;
    float: right;
-   margin-right: 20rpx;
+   margin-right: 10px;
+   height: 24px;
+   line-height: 24px;
 }
 .foot-img{
-  width: 55rpx;
-  height: 55rpx;
+  width: 24px;
+  height: 24px;
 }
-   
-  
+.switch-btn{
+  display: flex;
+  align-items: center;
+  height: 40px;
+}
 
 
 
