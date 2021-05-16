@@ -1,16 +1,14 @@
 <!--pages/forum/forum.wxml-->
-<view class="container">
-
 <block wx:for="{{lists}}" wx:key="index" > 
-<view class="all" bindtap="toDetail" data-item='{{lists[index]}}'>
+<view class="all" bindtap="toDetail" data-topic_id='{{ item.topic_id }}'>
 
 <view class="top">
 <view class="lt">
-<image src="{{ item.avatarUrl }}" style="width:100rpx;height:100rpx;"></image>
+<image src="{{ item.account_avatar?item.account_avatar:'../../images/default.png'}}" style="width:100rpx;height:100rpx;"></image>
 </view>
 <view class="rt">
-<text class="name">{{item.name}}</text>
-<text class="time">{{item.time}}</text>
+<text class="name">{{item.account_nickname}}</text>
+<text class="time">{{item.create_time}}</text>
 </view>
 
 </view>
@@ -28,4 +26,3 @@
 <button  class="add-button"  bindtap="toPost">
 <image class="add-img" src='../../images/post.png' mode="aspectFit"></image>
 </button>
-</view>

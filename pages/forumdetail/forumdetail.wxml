@@ -4,12 +4,11 @@
 <view class="all">
 <view class="top">
 <view class="lt">
-<image src="{{ avatarUrl }}" style="width:100rpx;height:100rpx;"></image>
+<image src="{{ avatarUrl?avatarUrl:'../../images/default.png' }}" style="width:100rpx;height:100rpx;"></image>
 </view>
 <view class="rt">
 <text class="name">{{name}}</text>
-<text wx:if="{{ identity!='admin' && permit==0}}" class="time">{{time}}</text>
-<view wx:if="{{ identity=='admin' || permit==1}}" class="time" bindtap="deleteInfo">{{time}} · 删除</view>
+<text class="time">{{time}}</text>
 </view>
 </view>
 <view class="content">
@@ -50,9 +49,7 @@
 <text class="name1">{{item.name}}</text>
 <view class="content1">{{item.content}}</view>
 <view class="rt1-buttom">
-<view wx:if="{{ identity!='admin' && item.permit==0}}" class="time1">{{item.time}} · 回复</view>
-<view wx:if="{{ identity=='admin' || item.permit==1}}" class="time1" bindtap="deletePL" data-id="{{item.id}}">{{item.time}} · 删除</view>
-
+<view class="time1">{{item.time}} · 回复</view>
 </view>
 </view>
 </view>

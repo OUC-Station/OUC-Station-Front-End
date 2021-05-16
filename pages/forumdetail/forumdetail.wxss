@@ -38,6 +38,7 @@ page{
   display: block;
 }
 .time{
+  margin-top: 10rpx;
   font-size: 25rpx;
   color: #777777;
   display: block;
@@ -47,7 +48,7 @@ page{
   margin-right: auto;
   width: 680rpx;
   border-bottom: 1px #777777;
-  margin-top: 25rpx;
+  margin-top: 30rpx;
   margin-bottom: 18rpx;
   color: #333333;
   font-size: 30rpx;

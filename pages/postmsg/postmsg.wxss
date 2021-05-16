@@ -8,10 +8,25 @@ button[disabled] {
 }
 .top{
   background-color: #ffffff;
+  height: 250px;
+}
+.tip{
+  padding-left: 16px;
+  color:#9a9a9a;
+  font-size: 14px;
+}
+.switch-btn{
+  position: absolute;
+  top: 210px;
+  right: 10px;
 }
 .input{
   padding: 15px;
   width: 93%;
+}
+.divline{
+  border-bottom: 1px dashed #efefef;
+  margin: 10px;
 }
 .btn-area{
   display: block;
@@ -38,3 +53,5 @@ button[disabled] {
   top: 3rpx;
   box-shadow: 0px 0px 10px #bbbec4 inset;
 }
+
+

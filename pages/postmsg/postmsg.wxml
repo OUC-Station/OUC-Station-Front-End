@@ -1,9 +1,20 @@
 <form bindsubmit="formSubmit" >
-
+    <van-dialog id="van-dialog" />
 <view class="top">
-   <textarea class="input" type='text' maxlength='300' name="content" value="{{content}}"placeholder="在这里写下你的疑问吧~" placeholder-style="color:#9a9a9a;font-size:34rpx;" bindinput='limitWord' auto-focus="true" show-confirm-bar="{{false}}"></textarea>
-     <text style="float: right; color:#9a9a9a;font-size:30rpx;">{{currentWord}}/{{maxWord}}(最多可输入300字)</text>
+   <textarea class="input" type='text' maxlength='500' name="content" value="{{content}}"placeholder="在这里写下你的疑问吧~" placeholder-style="color:#9a9a9a;font-size:15px;" bindinput='limitWord' auto-focus="true" show-confirm-bar="{{false}}"></textarea>
+
+<view class="divline"></view>
+   <view class="tip">
+   <text>{{currentWord}}/{{maxWord}}(最多可输入500字)</text>
 </view>
+<view class="switch-btn">
+<i-switch value="{{switch1}}" size="large" bind:change="onChange" slot="footer">
+            <view slot="open">实名</view>
+            <view slot="close">匿名</view>
+</i-switch>
+</view>
+</view>
+
 
 <view class='btn-area'>
     <button class='loginBtn' hover-class="loginBtn-hover" formType="submit" disabled="{{disabled}}">发送</button>

@@ -1,24 +1,27 @@
 {
   "pages":[
-    "pages/index/index",
-    "pages/empower/empower",
     "pages/forum/forum",
+    "pages/center/center",
+    "pages/index/index",
+    
+   
+    "pages/postmsg/postmsg",
     "pages/forumdetail/forumdetail",
     "pages/activitydetail/activitydetail",
-    "pages/center/center",
+   
     "pages/phone/phone",
     "pages/map/map",
-    
-    
     "pages/instruction/instruction",
     "pages/feedback/feedback",
+    "pages/empower/empower",
     "pages/logs/logs"
   ],
   "window":{
     "backgroundTextStyle":"light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black"
+    "navigationBarTextStyle":"black",
+    "backgroundColor": "#ccc"
   },
   "sitemapLocation": "sitemap.json",
   "tabBar": {

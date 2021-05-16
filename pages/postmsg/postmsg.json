@@ -1,5 +1,8 @@
 {
-  "usingComponents": {},
+  "usingComponents": {
+    "i-switch": "../iview-weapp/dist/switch/index",
+    "van-dialog": "@vant/weapp/dialog/index"
+  },
   "navigationBarBackgroundColor": "#fb6570",
   "navigationBarTextStyle": "white",
   "navigationBarTitleText": "发布疑问"

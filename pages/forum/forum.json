@@ -1,5 +1,6 @@
 {
   "usingComponents": {},
+  "enablePullDownRefresh": true,
   "navigationBarBackgroundColor": "#f7f7f7",
   "navigationBarTitleText": "交流论坛"
 }

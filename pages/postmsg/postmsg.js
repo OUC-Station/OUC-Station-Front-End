@@ -1,19 +1,31 @@
 const app = getApp();
 var url = app.globalData.urlPath;
-var time = ''; //存放任务发布的时间
+import Dialog from '@vant/weapp/dialog/dialog';
 var content = ''; //任务内容
+var anonymous = ''; //是否匿名，true为匿名
 Page({
   /**
    * 页面的初始数据
    */
   data: {
+    switch1 : true,
+
     //字数限制
-    maxWord: 300,
+    maxWord: 500,
     currentWord: 0,
     
     isDisabled:false,
     content:''
   },
+
+  onChange(event){
+    const detail = event.detail;
+    this.setData({
+        'switch1' : detail.value
+    })
+    anonymous = !detail.value;
+    console.log("修改后的anonymous:",anonymous);
+},
 
   limitWord: function (e) {//字数限制
     var that = this;
@@ -28,70 +40,76 @@ Page({
   },
 
   formSubmit: function (e) {//提交表单信息
-    time = util.formatTime(new Date());
-    content = e.detail.value.content;
-    var openid = app.globalData.openId;
-    console.log("发布时间：" + time);//打印任务发布的时间
-    console.log("内容：" +content);//打印任务描述的内容
-    console.log("openid:",openid)
-    this.setData({
-      disabled:true //点击发布后按钮不可用
+    Dialog.confirm({
+      message: '确定发布此评论',
     })
-    var url = app.globalData.urlPath
-    wx.request({
-          url: url+'/api/bbs/post_topic',     
-          header: {  
-              "content-Type": "application/x-www-form-urlencoded"    
+      .then(() => {
+        content = e.detail.value.content;
+        console.log("内容：" +content);//打印任务描述的内容
+        this.setData({
+          disabled:true //点击发布后按钮不可用
+        })
+    
+        wx.request({
+              url: url+'/api/bbs/post_topic',     
+              header: {
+                "Content-Type":"application/json;charset=UTF-8",
+                'cookie': wx.getStorageSync("cookie")
+                  },
+          method: 'POST',
+          data: {
+            title: '1',
+            content: content,
+            anonymous: anonymous
           },
-      method: 'POST',
-      data: {
-        userid:openid,
-        content:content,
-      },
-      success: function (res) {
-        console.log("succeed in connecting");
-        console.log(res);
-        if(res.data.result == "success"){
-          wx.showToast({
-            title: '发布成功(✪▽✪)',
-            icon:  'none',
-            duration: 2000
-          })
+          success: function (res) {
+            console.log("succeed in connecting");
+            console.log(res);
+            if(res.data.result == "success"){
+              wx.showToast({
+                title: '发布成功(✪▽✪)',
+                icon:  'none',
+                duration: 2000
+              })
+              
+            }else if(res.data.result == "false"){
+              wx.showToast({
+                title: '发布失败',
+                icon:  'none',
+                duration: 2000
+              })
+              
+            }
           
-        }else if(res.data.result == "false"){
-          wx.showToast({
-            title: '发布失败',
-            icon:  'none',
-            duration: 2000
-          })
-          
-        }
-        wx.navigateTo({
-          url: '/pages/forum/forum',
-         
-          success(){
-            let page = getCurrentPages().pop(); //跳转页面成功之后
-            if (!page) return;
-            page.onLoad(); //如果页面存在，则重新刷新页面
+            wx.navigateBack({
+              success: function(){
+                let page = getCurrentPages().pop(); //跳转页面成功之后
+                if (!page) return;
+                page.onLoad(); //如果页面存在，则重新刷新页面
+              }
+            })
+          },
+          fail: function (res) {
+            wx.showToast({
+              title: '发布失败~',
+              icon: 'none',
+              duration: 1000
+            })
+            console.log("fail to connect");
           }
-        })
-      },
-      fail: function (res) {
-        wx.showToast({
-          title: '发布失败~',
-          icon: 'none',
-          duration: 1000
-        })
-        console.log("fail to connect");
-      }
-      
-    })
+        })    
+      })
+      .catch(() => {
+        // on cancel
+        console.log("取消发布")
+      });
   },
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-  
+    anonymous = !this.data.switch1;
+    console.log("anonymous: ",anonymous)
   },
 
   /**

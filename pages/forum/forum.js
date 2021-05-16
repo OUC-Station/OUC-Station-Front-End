@@ -1,24 +1,26 @@
 // pages/forum/forum.js
+const moment = require('../moment_modules/moment/moment.js');
+moment.locale('zh-cn');
 var app = getApp();
 var url = app.globalData.urlPath;
+var page = '';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    lists: []
+    lists: [],
+    lastpage: 0
   },
 
   
     //点击跳转到详情页
     toDetail: function (e) {
-      let item = e.currentTarget.dataset.item;
-      console.log("item数据为:", item);
-      let str = JSON.stringify(item)
-      var encodeData = encodeURIComponent(JSON.stringify(item));// 对数据字符串化并转码，防止特殊字符影响传参
+      let topic_id = e.currentTarget.dataset.topic_id;
+      console.log("topic_id数据为:", topic_id);
       wx.navigateTo({
-        url: '/pages/forumdetail/forumdetail?jsonStr=' +encodeData
+        url: '/pages/forumdetail/forumdetail?topic_id=' + topic_id
       })
     },
   
@@ -29,46 +31,70 @@ Page({
         })
     },
   
-    onLoad: function (options) {
-    },
-  
-    /**
-     * 生命周期函数--监听页面初次渲染完成
-     */
-    onReady: function () {
-  
-    },
   
     /**
      * 生命周期函数--监听页面显示
      */
-    onShow: function () {
-      let that = this;
-      //获取数据
-      wx.request({
-        url: url+'/api/bbs/get_topics',
-        method: "GET",
-        header: {
-          "Content-Type": "application/x-www-form-urlencoded"   
-        },
-        data: {
-          
-        },
-        success: function (res) {
-          console.log("RES",res)
-          var listall = JSON.parse(res.data);
-          console.log("选课论坛----------》",listall)
-          for(var i=0; i<listall.length; i++){
-            listall[i].time = moment(listall[i].time).calendar();
-           }
-          //setTimeout(() => {
-            that.setData({
-              lists: listall,
-            });
-            //隐藏 加载中的提示
-           // wx.hideLoading();
-         // }, 1500)
-        },
+    onLoad: function (options){
+      page = 1;
+      this.setData({
+        lists: []
       })
-    }
+      var that = this;
+      that.loadData(page);
+    },
+
+    loadData: function(page){
+      var that = this;
+      wx.showLoading({
+        title: '数据加载中...',
+      })
+      var oldlists = that.data.lists; // 获取上次加载的数据
+      console.log("oldlists",oldlists)
+      wx.request({
+            url: url+'/api/bbs/get_topics',
+            method: "GET",
+            header: {
+             "Content-Type": "application/x-www-form-urlencoded"   
+             },
+           data: {
+             current: page
+           },
+           success: function (res) {
+                console.log("活动列表数据：",res.data.data)
+                var listall = res.data.data.topics;
+                for(var i=0; i<listall.length; i++){
+                  listall[i].create_time = moment(listall[i].create_time).calendar();
+                 }
+                 var newlists = oldlists.concat(listall);
+                 setTimeout(() => {
+                  that.setData({
+                    lists: newlists,
+                    lastpage: res.data.data.total
+                  });
+                  wx.hideLoading()
+                 },1000)
+          },
+         })
+    },
+    onReachBottom: function(){
+      page++;
+      if(this.data.lastpage >= page){
+        this.loadData(page);
+      }else{
+        wx.showToast({
+          title: '没有更多数据啦~',
+          icon: 'none',
+          duration: 1000
+        })
+      }
+    },
+ //下拉刷新
+  onPullDownRefresh: function () {
+    var page=getCurrentPages().pop();//得到这个页面对象
+ 
+    page.onLoad();//调用页面的onLoad()方法进行刷新页面
+    wx.stopPullDownRefresh() //刷新成功后停止下拉刷新
+  },
+
 })
