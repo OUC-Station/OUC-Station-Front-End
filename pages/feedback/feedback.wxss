@@ -1,1 +1,54 @@
 /* pages/feedback/feedback.wxss */
+/*意见反馈*/
+.form{
+  padding-top:5rpx;
+  align-items: center;
+  justify-content: center;
+}
+.content{
+  border-radius: 10rpx;
+  overflow: hidden;
+  margin: 35rpx;
+  background-color: #fff;
+  border: 1px dashed #cecbcb;
+}
+.input2{
+  width:  640rpx;
+  margin: 20rpx;
+}
+.btn-area1{
+  margin-bottom: 50rpx;
+  width: 100%;
+}
+.tip{
+  margin-left: auto;
+  margin-right: auto;
+  width: 610rpx;
+  color:#ababab;
+  font-size: 28rpx;
+  text-align: center;
+}
+.loginBtn{
+  margin-top: 50rpx;
+  align-items: center;
+  text-align: center;
+  width: 90%;
+  border-radius: 10rpx;
+  color: #fff;
+  background-color: #46c47d;
+  font-size: 32rpx;
+  letter-spacing: 5rpx;
+  border: none;
+}
+.loginBtn::after{
+  border: none;
+}
+.loginBtn-hover{
+  position: relative;
+  top: 3rpx;
+  box-shadow: 0rpx 0rpx 20rpx #bbbec4 inset;
+}
+.textInputPlaceHolder{
+  color:#ababab;
+  font-size: 16px;
+}

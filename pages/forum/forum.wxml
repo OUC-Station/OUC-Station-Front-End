@@ -22,9 +22,6 @@
 </view>
 </block>
 
-<view class="loadtip" wx:if="{{ tipShow }}">
-  <van-loading size="12px">加载中...</van-loading>
-</view>
 
 <button  class="add-button"  bindtap="toPost">
 <image class="add-img" src='../../images/post.png' mode="aspectFit"></image>

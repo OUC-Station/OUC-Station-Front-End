@@ -96,11 +96,7 @@ page{
 .foot-num{
   width: 48rpx;
   height:48rpx;
+  line-height: 48rpx;
   color: #999999;
   font-size: 28rpx;
-}
-.loadtip{
-  text-align: center;
-  margin-top: 20rpx;
-  margin-bottom: 20rpx;
 }

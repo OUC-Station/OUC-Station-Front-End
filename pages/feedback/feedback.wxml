@@ -1,2 +1,12 @@
 <!--pages/feedback/feedback.wxml-->
-<text>pages/feedback/feedback.wxml</text>
+<van-dialog id="van-dialog" />
+<view class="form" >
+      <view class="content">
+     <textarea class="input2" type='text' maxlength='500' name="content" value="{{content}}" placeholder="请输入您宝贵的意见或建议"  placeholder-class='textInputPlaceHolder' bindinput='limitWord' show-confirm-bar="{{false}}"></textarea>
+       <text style="float: right; color:#ababab;font-size:28rpx;">{{currentWord}}/{{maxWord}}(最多可输入500字)</text>
+     </view>
+ </view>
+ <view class="tip">欢迎您为我们提出宝贵的意见和建议，您留下的任何信息都将用来改善我们的小程序。</view>
+<view class='btn-area1'>
+      <button class='loginBtn' hover-class="loginBtn-hover" bindtap="submit">提交反馈</button>
+ </view>

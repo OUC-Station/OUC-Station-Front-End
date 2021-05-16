@@ -11,7 +11,6 @@ Page({
    */
   data: {
     lists: [],
-    tipShow: true,
     lastpage: 0
   },
 
@@ -37,9 +36,6 @@ Page({
      * 生命周期函数--监听页面显示
      */
     onShow: function (){
-      this.setData({
-        tipShow: true
-      })
       page = 1;
       this.setData({
         lists: []
@@ -68,12 +64,10 @@ Page({
                   listall[i].create_time = moment(listall[i].create_time).calendar();
                  }
                  var newlists = oldlists.concat(listall);
-                 setTimeout(() => {
                   that.setData({
                     lists: newlists,
                     lastpage: res.data.data.total
                   });
-                 },1000)
           },
          })
     },
@@ -87,9 +81,6 @@ Page({
           title: '没有更多数据啦~',
           icon: 'none',
           duration: 1000
-        })
-        this.setData({
-          tipShow: false
         })
       }
     },

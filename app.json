@@ -2,18 +2,14 @@
   "pages":[
     "pages/index/index",
     "pages/forum/forum",
-    
+    "pages/feedback/feedback",
     "pages/forumdetail/forumdetail",
-  
     "pages/center/center",
     "pages/postmsg/postmsg",
-    
     "pages/activitydetail/activitydetail",
-   
     "pages/phone/phone",
     "pages/map/map",
     "pages/instruction/instruction",
-    "pages/feedback/feedback",
     "pages/empower/empower",
     "pages/logs/logs"
   ],

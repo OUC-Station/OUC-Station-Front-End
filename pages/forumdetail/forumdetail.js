@@ -100,22 +100,6 @@ focus: function (e) {
   success: function (res) {
     console.log("succeed in connecting");
     console.log(res);
-    if(res.data.result == "success"){
-      wx.showToast({
-        title: '评论成功~',
-        icon:  'none',
-        duration: 2000
-      })
-      
-    }else if(res.data.result == "false"){
-      wx.showToast({
-        title: '评论失败',
-        icon:  'none',
-        duration: 2000
-      })
-      
-    }
-
     that.getAll();
     that.setData({
       inputText: '',

@@ -40,6 +40,7 @@ Page({
   },
 
   formSubmit: function (e) {//提交表单信息
+    let that = this;
     Dialog.confirm({
       message: '确定发布此评论',
     })
@@ -65,21 +66,7 @@ Page({
           success: function (res) {
             console.log("succeed in connecting");
             console.log(res);
-            if(res.data.result == "success"){
-              wx.showToast({
-                title: '发布成功(✪▽✪)',
-                icon:  'none',
-                duration: 2000
-              })
-              
-            }else if(res.data.result == "false"){
-              wx.showToast({
-                title: '发布失败',
-                icon:  'none',
-                duration: 2000
-              })
-              
-            }
+            
             that.setData({
               inputText: ''
             })
@@ -87,7 +74,7 @@ Page({
               success: function(){
                 let page = getCurrentPages().pop(); //跳转页面成功之后
                 if (!page) return;
-                page.onLoad(); //如果页面存在，则重新刷新页面
+                page.onShow(); //如果页面存在，则重新刷新页面
               }
             })
           },
