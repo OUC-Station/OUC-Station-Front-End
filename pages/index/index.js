@@ -32,14 +32,14 @@ Page({
 },
 
   onLoad() {
-    this.setData({
-      tipShow: true
-    })
      var that = this;
      that.loadData(page);
   },
 
   loadData: function(page){
+    this.setData({
+      tipShow: true
+    })
     var that = this;
     var oldlists = that.data.lists; // 获取上次加载的数据
     console.log("oldlists",oldlists)

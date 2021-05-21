@@ -11,7 +11,8 @@ Page({
    */
   data: {
     lists: [],
-    lastpage: 0
+    lastpage: 0,
+    tipShow: true
   },
 
   
@@ -45,6 +46,9 @@ Page({
     },
 
     loadData: function(page){
+      this.setData({
+        tipShow: true
+      })
       var that = this;
       var oldlists = that.data.lists; // 获取上次加载的数据
       console.log("oldlists",oldlists)
@@ -77,6 +81,9 @@ Page({
       if(this.data.lastpage >= page){
         this.loadData(page);
       }else{
+        this.setData({
+          tipShow: false
+        })
         wx.showToast({
           title: '没有更多数据啦~',
           icon: 'none',
