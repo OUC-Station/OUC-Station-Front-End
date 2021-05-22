@@ -1,11 +1,8 @@
 {
   "usingComponents": {
-    "van-loading": "@vant/weapp/loading/index",
-    "van-toast": "@vant/weapp/toast/index"
+    "van-loading": "@vant/weapp/loading/index"
   },
   "enablePullDownRefresh": true,
   "navigationBarBackgroundColor": "#f7f7f7",
-  "navigationBarTitleText": "交流论坛",
-  "backgroundColor": "#f7f7f7",
-  "backgroundTextStyle": "dark"
+  "navigationBarTitleText": "交流论坛"
 }

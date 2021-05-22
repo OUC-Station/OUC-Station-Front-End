@@ -106,7 +106,3 @@ page{
   margin-top: 20rpx;
   margin-bottom: 20rpx;
 }
-
-#van-toast{
-  --toast-text-padding: 24rpx 36rpx
-}

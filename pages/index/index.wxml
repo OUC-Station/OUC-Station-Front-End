@@ -33,5 +33,5 @@ circular="{{swiper.circular}}"
         <view class="loadtip" wx:if="{{ tipShow }}">
   <van-loading size="12px">加载中...</van-loading>
 </view>
-<van-toast id="van-toast" />
+
     </view>
