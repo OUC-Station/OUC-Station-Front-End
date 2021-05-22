@@ -31,9 +31,21 @@ Page({
   })
 },
 
+  onPullDownRefresh() {
+    var that = this;
+    page = 1;
+    that.setData({
+      lists: [],
+      lastpage: 0,
+      tipShow: true
+    })
+    this.onLoad();
+  },
+ 
   onLoad() {
-     var that = this;
-     that.loadData(page);
+    wx.stopPullDownRefresh();
+    var that = this;
+    that.loadData(page);
   },
 
   loadData: function(page){
@@ -82,7 +94,7 @@ Page({
       wx.showToast({
         title: '没有更多数据啦~',
         icon: 'none',
-        duration: 1000
+        duration: 1200
       })
     }
   },
