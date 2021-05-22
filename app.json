@@ -1,5 +1,7 @@
 {
-  "pages":[
+  "pages": [
+    "pages/map/map",
+    "pages/mapdetail/mapdetail",
     "pages/index/index",
     "pages/forum/forum",
     "pages/feedback/feedback",
@@ -8,16 +10,15 @@
     "pages/postmsg/postmsg",
     "pages/activitydetail/activitydetail",
     "pages/phone/phone",
-    "pages/map/map",
     "pages/instruction/instruction",
     "pages/empower/empower",
     "pages/logs/logs"
   ],
-  "window":{
-    "backgroundTextStyle":"light",
+  "window": {
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",
     "navigationBarTitleText": "Weixin",
-    "navigationBarTextStyle":"black",
+    "navigationBarTextStyle": "black",
     "backgroundColor": "#ccc"
   },
   "sitemapLocation": "sitemap.json",
