@@ -1,5 +1,6 @@
 // pages/forumdetail/forumdetail.js
 const moment = require('../moment_modules/moment/moment.js');
+import Dialog from '@vant/weapp/dialog/dialog';
 moment.locale('zh-cn');
 var app = getApp();
 var url = app.globalData.urlPath;
@@ -133,7 +134,8 @@ focus: function (e) {
         url: url+'/api/bbs/get_topic_detail',
          method: "GET",
          header: {
-            "Content-Type":"application/json;charset=UTF-8" 
+            "Content-Type":"application/json;charset=UTF-8" ,
+            'cookie': wx.getStorageSync("cookie")
          },
          data: {
             topic_id: topic_id
@@ -149,12 +151,65 @@ focus: function (e) {
           avatarUrl: res.data.data.account_avatar,
           time: moment(res.data.data.create_time).calendar(),
           content: res.data.data.content,
-          nowcount: res.data.data.comments.length
+          nowcount: res.data.data.comments.length,
+          can_delete: res.data.data.can_delete
         })
         that.setData({
            lists: listall
         });
       },
     })
-  }
+  },
+
+  /* 删除所有评论 */
+    deleteInfo: function (e) {
+    Dialog.confirm({
+      message: '确定删除当前评论',
+    })
+      .then(() => {
+        // on confirm
+         wx.request({
+                      url: url+'/api/bbs/delete_topic',
+                      method: "POST",
+                      header: {
+                         "Content-Type":"application/json;charset=UTF-8",
+                         'cookie': wx.getStorageSync("cookie")
+                      },
+                      data: {
+                          topic_id: topic_id
+                      }, 
+                      success: function (res) {
+                             console.log("删除",res)
+                        if(res.data.result == "success"){
+                          wx.showToast({
+                            title: '删除成功~',
+                            icon:  'none',
+                            duration: 2000
+                           })
+              
+                        }else if(res.data.result == "false"){
+                            wx.showToast({
+                               title: '删除失败',
+                              icon:  'none',
+                              duration: 2000
+                       })
+              
+            }
+                       wx.navigateBack({
+                           success: function(){
+                                let page = getCurrentPages().pop(); //跳转页面成功之后
+                                 if (!page) return;
+                                    page.onShow(); //如果页面存在，则重新刷新页面
+                               }
+                        })
+                    },
+                    })
+       
+      })
+      .catch(() => {
+        // on cancel
+        console.log("取消删除")
+      });
+  
+      }
 })

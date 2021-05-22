@@ -4,6 +4,8 @@ moment.locale('zh-cn');
 const app = getApp()
 var url = app.globalData.urlPath;
 var page = 1;
+var total = '';
+var num = '';
 Page({
   data: {
     swiper:{
@@ -68,6 +70,15 @@ Page({
                   lastpage: res.data.data.total
                 });
                },1000)
+               total = res.data.data.total,
+               num = res.data.data.num
+               console.log("total",total);
+               console.log("num",num)
+               if(total == 1 && num <= 10 ){
+                 that.setData({
+                   tipShow: false
+                 })
+              }
         },
        })
   },

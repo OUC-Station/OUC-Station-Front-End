@@ -8,7 +8,8 @@
 </view>
 <view class="rt">
 <text class="name">{{name}}</text>
-<text class="time">{{time}}</text>
+<text wx:if="{{ !can_delete }}" class="time">{{time}}</text>
+<view wx:if="{{ can_delete }}" class="time" bindtap="deleteInfo">{{time}} · 删除</view>
 </view>
 </view>
 <view class="content">
