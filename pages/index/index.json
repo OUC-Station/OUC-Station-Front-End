@@ -1,8 +1,12 @@
 {
   "usingComponents": {
-    "van-loading": "@vant/weapp/loading/index"
+    "van-loading": "@vant/weapp/loading/index",
+    "van-toast": "@vant/weapp/toast/index"
   },
   "navigationBarTitleText": "活动中心",
   "navigationBarBackgroundColor": "#a0887e",
-   "navigationBarTextStyle": "white"
+  "navigationBarTextStyle": "white",
+  "enablePullDownRefresh": true,
+  "backgroundColor": "#f7f7f7",
+  "backgroundTextStyle": "dark"
 }
