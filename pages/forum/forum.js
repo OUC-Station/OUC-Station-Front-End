@@ -4,8 +4,6 @@ moment.locale('zh-cn');
 var app = getApp();
 var url = app.globalData.urlPath;
 var page = '';
-var total = '';
-var num = '';
 Page({
 
   /**
@@ -74,15 +72,6 @@ Page({
                     lists: newlists,
                     lastpage: res.data.data.total
                   });
-                  total = res.data.data.total,
-                  num = res.data.data.num
-                  console.log("total",total);
-                  console.log("num",num)
-                  if(total == 1 && num <= 10 ){
-                    that.setData({
-                      tipShow: false
-                    })
-                 }
           },
          })
     },
