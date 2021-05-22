@@ -1,9 +1,10 @@
 // pages/forum/forum.js
 const moment = require('../moment_modules/moment/moment.js');
+import Toast from '../miniprogram_npm/@vant/weapp/toast/toast';
 moment.locale('zh-cn');
 var app = getApp();
 var url = app.globalData.urlPath;
-var page = '';
+var page = 1;
 Page({
 
   /**
@@ -39,7 +40,8 @@ Page({
     onShow: function (){
       page = 1;
       this.setData({
-        lists: []
+        lists: [],
+        lastpage: 0,
       })
       var that = this;
       that.loadData(page);
@@ -68,10 +70,12 @@ Page({
                   listall[i].create_time = moment(listall[i].create_time).calendar();
                  }
                  var newlists = oldlists.concat(listall);
+                setTimeout(() => {
                   that.setData({
                     lists: newlists,
                     lastpage: res.data.data.total
-                  });
+                  })
+                },1000)
           },
          })
     },
@@ -84,10 +88,9 @@ Page({
         this.setData({
           tipShow: false
         })
-        wx.showToast({
-          title: '没有更多数据啦~',
-          icon: 'none',
-          duration: 1000
+        Toast({
+          message: '没有更多数据啦~',
+          duration: 1200
         })
       }
     },

@@ -3,7 +3,7 @@ page{
 }
 /* swiper轮播组件 */
 .swiperarea{
-  margin-top: 30rpx;
+  padding-top: 30rpx;
 }
 swiper{
   margin: 0 auto;
@@ -99,4 +99,8 @@ swiper{
   text-align: center;
   margin-top: 20rpx;
   margin-bottom: 20rpx;
+}
+
+#van-toast {
+  --toast-text-padding: 24rpx 36rpx
 }

@@ -1,5 +1,6 @@
 // index.js
 const moment = require('../moment_modules/moment/moment.js');
+import Toast from '../miniprogram_npm/@vant/weapp/toast/toast';
 moment.locale('zh-cn');
 const app = getApp()
 var url = app.globalData.urlPath;
@@ -32,19 +33,17 @@ Page({
 },
 
   onPullDownRefresh() {
-    var that = this;
-    page = 1;
-    that.setData({
-      lists: [],
-      lastpage: 0,
-      tipShow: true
-    })
     this.onLoad();
   },
  
   onLoad() {
     wx.stopPullDownRefresh();
+    page = 1;
     var that = this;
+    this.setData({
+      lists: [],
+      lastpage: 0,
+    })
     that.loadData(page);
   },
 
@@ -91,9 +90,8 @@ Page({
       this.setData({
         tipShow: false
       })
-      wx.showToast({
-        title: '没有更多数据啦~',
-        icon: 'none',
+      Toast({
+        message: '没有更多数据啦~',
         duration: 1200
       })
     }
