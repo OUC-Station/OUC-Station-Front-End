@@ -1,22 +1,44 @@
-const info = require('../../config/info.js')
+const westinfo = require('../../config/westinfo.js')
+const southinfo = require('../../config/southinfo.js')
 const site = require('../../config/site.js')
-var app = getApp();
-var url = app.globalData.urlPath;
-
+//var app = getApp();
+//var url = app.globalData.urlPath;
 Page({
   data: {
-    latitude: 36.16381384970564,  //默认定位经度
-    longitude: 120.49716213967224, //默认定位维度
-    polyline: [{
-      points: info.path,
-      color: "#a885d5",
-      width: 5,
-      borderColor: '#414f3e',
-      borderWidth: 1
-    }],
+    active: 1,
+    latitude: 36.16404491277912,
+    longitude: 120.50059948905732,
+    //latitude: 36.16381384970564,  //默认定位经度
+    //longitude: 120.49716213967224, //默认定位维度
     markers: site.site
   },
   
+  onChange(event) {
+    let that = this;
+   if(event.detail.name == 1){//西线
+      that.setData({
+        polyline: [{
+          points: westinfo.path,
+          color: "#a885d5",
+          width: 5,
+          borderColor: '#414f3e',
+          borderWidth: 1
+        }],
+      })
+   }else{ //南线
+    that.setData({
+      polyline: [{
+        points: southinfo.path,
+        color: "#a885d5",
+        width: 5,
+        borderColor: '#414f3e',
+        borderWidth: 1
+      }],
+    })
+   }
+  },
+
+
   points: [
   ],
   recording: false,

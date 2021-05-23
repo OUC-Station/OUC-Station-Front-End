@@ -1,5 +1,6 @@
 // pages/forum/forum.js
 const moment = require('../moment_modules/moment/moment.js');
+import Toast from '../miniprogram_npm/@vant/weapp/toast/toast';
 moment.locale('zh-cn');
 var app = getApp();
 var url = app.globalData.urlPath;
@@ -48,9 +49,6 @@ Page({
     },
 
     loadData: function(page){
-      this.setData({
-        tipShow: true
-      })
       var that = this;
       var oldlists = that.data.lists; // 获取上次加载的数据
       console.log("oldlists",oldlists)
@@ -74,7 +72,7 @@ Page({
                     lists: newlists,
                     lastpage: res.data.data.total
                   });
-             total = res.data.data.total,
+               total = res.data.data.total,
                num = res.data.data.num
              console.log("total", total);
              console.log("num", num)
@@ -95,9 +93,8 @@ Page({
         this.setData({
           tipShow: false
         })
-        wx.showToast({
-          title: '没有更多数据啦~',
-          icon: 'none',
+        Toast({
+          message: '没有更多数据啦~',
           duration: 1000
         })
       }
@@ -105,9 +102,7 @@ Page({
  //下拉刷新
   onPullDownRefresh: function () {
     var page=getCurrentPages().pop();//得到这个页面对象
- 
     page.onShow();//调用页面的onLoad()方法进行刷新页面
     wx.stopPullDownRefresh() //刷新成功后停止下拉刷新
   },
-
 })

@@ -103,7 +103,7 @@ Page({
       })
       Toast({
         message: '没有更多数据啦~',
-        duration: 1200
+        duration: 1000
       })
     }
   },

@@ -220,7 +220,27 @@ const site =
             padding: 5,  //文本边缘留白
             textAlign: 'center'  //文本对齐方式。有效值: left, right, center
           }
-        }
+        },
+          //映月湖
+          {
+            id: 11,
+            iconPath: "../../images/default.png",
+            latitude: 36.158395995280245,
+            longitude: 120.49575118836287,
+            width: 50,
+            height: 50,
+            callout: {
+              display:'ALWAYS',// 常显气泡
+              content: '映月湖',  //名称文本
+              color: '#000000',  //文本颜色
+              borderRadius: 5,  //边框圆角
+              borderWidth: 1,  //边框宽度
+              borderColor: '#ffffff',  //边框颜色
+              bgColor: '#ffffff',  //背景色
+              padding: 5,  //文本边缘留白
+              textAlign: 'center'  //文本对齐方式。有效值: left, right, center
+            }
+          }
     ]
 
 
