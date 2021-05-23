@@ -1,8 +1,6 @@
 const westinfo = require('../../config/westinfo.js')
 const southinfo = require('../../config/southinfo.js')
 const site = require('../../config/site.js')
-//var app = getApp();
-//var url = app.globalData.urlPath;
 Page({
   data: {
     active: 1,
@@ -101,27 +99,13 @@ Page({
 
 
   onLoad: function (options) {
-    /*
-    wx.request({
-          url: url+'/api/location/get_locations_list',
-          method: "GET",
-          header: {
-           "Content-Type": "application/x-www-form-urlencoded"   
-           },
-         data: {
-           
-         },
-         success: function (res) {
-             console.log("地图：",res)
-              
-        },
-       })
-     */
+  
   },
   bindmarkertap: function(e){//跳转到地图详情
-    console.log("此时点击了：",e.detail)
+    console.log("此时点击了：",e.detail.markerId)
+    var markerId = e.detail.markerId;
     wx.navigateTo({
-      url: '/pages/mapdetail/mapdetail',
+      url: '/pages/mapdetail/mapdetail?markerId=' + markerId
     })
   }
 })

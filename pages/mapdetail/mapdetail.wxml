@@ -1,2 +1,3 @@
 <!--pages/mapdetail/mapdetail.wxml-->
-<text>pages/mapdetail/mapdetail.wxml</text>
+<view>{{ name }}</view>
+<button bindtap="gotoSite">到这边去</button>
