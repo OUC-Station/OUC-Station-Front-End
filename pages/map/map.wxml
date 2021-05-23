@@ -11,7 +11,7 @@ bind:change="onChange">
     <map
       scale="{{ 18 }}"
       id="myMap"
-      style="width: 100%; height: 300px"
+      style="width: 100%; height: {{ windowHeight }}px;"
       latitude="{{latitude}}"
       longitude="{{longitude}}"
       bindtap="bindmaptap" polyline="{{polyline}}"
@@ -19,19 +19,8 @@ bind:change="onChange">
       bindmarkertap="bindmarkertap"
     ></map>
   </view>
-  <view class="page-section page-section-gap">
-    <button class="page-body-button" bindtap="startRecord">开始录制</button>
-    <button class="page-body-button" bindtap="printPath">打印路径</button>
-    <button class="page-body-button" bindtap="pauseRecord">暂停录制</button>
-    <button class="page-body-button" bindtap="stopRecord">停止录制</button>
-    <button class="page-body-button" bindtap="goback">倒退一步</button>
-  </view>
 </view>
   </van-tab>
-
-
-
-
 
   <van-tab title="西线">
     <view class="page-body">
@@ -39,20 +28,13 @@ bind:change="onChange">
     <map
       scale="{{ 18 }}"
       id="myMap"
-      style="width: 100%; height: 300px"
+      style="width: 100%; height: {{ windowHeight }}px;"
       latitude="{{latitude}}"
       longitude="{{longitude}}"
       bindtap="bindmaptap" polyline="{{polyline}}"
       markers="{{markers}}"
       bindmarkertap="bindmarkertap"
     ></map>
-  </view>
-  <view class="page-section page-section-gap">
-    <button class="page-body-button" bindtap="startRecord">开始录制</button>
-    <button class="page-body-button" bindtap="printPath">打印路径</button>
-    <button class="page-body-button" bindtap="pauseRecord">暂停录制</button>
-    <button class="page-body-button" bindtap="stopRecord">停止录制</button>
-    <button class="page-body-button" bindtap="goback">倒退一步</button>
   </view>
 </view>
   </van-tab>

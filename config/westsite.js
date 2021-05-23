@@ -181,29 +181,10 @@ const site =
             textAlign: 'center'  //文本对齐方式。有效值: left, right, center
           }
         },
-         //南门
-         {
-          id: 9,
-          iconPath: "../../images/default.png",
-          latitude: 36.15815548604038,
-          longitude: 120.49325050010543,
-          width: 50,
-          height: 50,
-          callout: {
-            display:'ALWAYS',// 常显气泡
-            content: '南门',  //名称文本
-            color: '#000000',  //文本颜色
-            borderRadius: 5,  //边框圆角
-            borderWidth: 1,  //边框宽度
-            borderColor: '#ffffff',  //边框颜色
-            bgColor: '#ffffff',  //背景色
-            padding: 5,  //文本边缘留白
-            textAlign: 'center'  //文本对齐方式。有效值: left, right, center
-          }
-        },
+        
          //树下空间
          {
-          id: 10,
+          id: 9,
           iconPath: "../../images/default.png",
           latitude: 36.1618045408195,
           longitude: 120.49785989968382,
@@ -223,7 +204,7 @@ const site =
         },
           //映月湖
           {
-            id: 11,
+            id: 10,
             iconPath: "../../images/default.png",
             latitude: 36.158395995280245,
             longitude: 120.49575118836287,

@@ -1,5 +1,6 @@
 // pages/mapdetail/mapdetail.js
-const site = require('../../config/site.js')
+const westsite = require('../../config/westsite.js');
+const southsite = require('../../config/southsite.js');
 var latitude = ''; //纬度
 var longitude = '';//经度
 var name = '';//目的地名称
@@ -17,14 +18,26 @@ Page({
    */
   onLoad: function (options) {
       var markerId = options.markerId;
-      console.log("跳转后的markerId为：",markerId);
-      console.log("site",site.site[markerId]);
-      latitude = site.site[markerId].latitude;
-      longitude = site.site[markerId].longitude;
-      name = site.site[markerId].callout.content;
-      this.setData({
-        name: site.site[markerId].callout.content
-      })
+      var route = options.route;
+      console.log("跳转后的markerId为：", markerId);
+      console.log("跳转后的route为：", route);
+      if(route == 1){//西线
+        console.log("westsite",westsite.site[markerId]);
+        latitude = westsite.site[markerId].latitude;
+        longitude = westsite.site[markerId].longitude;
+        name = westsite.site[markerId].callout.content;
+        this.setData({
+          name: name
+        })
+      }else{//南线
+        console.log("southsite",southsite.site[markerId]);
+        latitude = southsite.site[markerId].latitude;
+        longitude = southsite.site[markerId].longitude;
+        name = southsite.site[markerId].callout.content;
+        this.setData({
+          name: name
+        })
+      }
   },
   gotoSite: function(){
       console.log("经度：",longitude);

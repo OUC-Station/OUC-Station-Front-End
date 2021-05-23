@@ -5,7 +5,8 @@ App({
      wx.getSystemInfo({
       success: res => {
          console.log("导航高度",res)
-         this.globalData.windowWidth = res.windowWidth
+         this.globalData.windowWidth = res.windowWidth;
+         this.globalData.windowHeight = res.windowHeight;
       }
     })
    let menuButtonObject = wx.getMenuButtonBoundingClientRect();
@@ -135,6 +136,7 @@ App({
 
   globalData: {
     windowWidth: null, //手机屏幕宽度
+    windowHeight: null, //手机屏幕高度
     top:null, //胶囊按钮到顶部的距离
     is_login: false,
     avatar: null,

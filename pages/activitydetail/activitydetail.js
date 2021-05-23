@@ -1,7 +1,7 @@
 // pages/activitydetail/activitydetail.js
 const moment = require('../moment_modules/moment/moment.js');
 moment.locale('zh-cn');
-const app = getApp()
+const app = getApp();
 var url = app.globalData.urlPath;
 var top = Math.round(app.globalData.top*0.85); //胶囊按钮到顶部的距离乘以0.85再四舍五入
 var windowWidth = Math.round(app.globalData.windowWidth*0.85);// 手机屏幕宽度乘以0.85再四舍五入
