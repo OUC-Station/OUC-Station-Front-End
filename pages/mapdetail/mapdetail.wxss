@@ -1,1 +1,58 @@
 /* pages/mapdetail/mapdetail.wxss */
+page{
+  background: #eef2fb;
+}
+.card{
+  width: 680rpx;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 30rpx;
+  margin-bottom: 30rpx;
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.12), 0 2rpx 4rpx rgba(0,0,0,0.24);
+}
+.cover{
+  position: relative;
+  width: 680rpx;
+  height:400rpx;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+}
+.biaoqian{
+  position: absolute;
+  bottom: 0;
+  width: 680rpx;
+  height: 98rpx;
+  background: rgba(0,0,0, .6);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-items: center;
+}
+.name{
+  position: absolute;
+  left: 20rpx;
+  color: #ffffff;
+  font-size: 38rpx;
+  height: 55rpx;
+  line-height: 55rpx;
+}
+.navigateicon{
+  position: absolute;
+  right: 20rpx;
+  width: 55rpx;
+  height: 55rpx;
+  border-radius: 50%;
+}
+.navigateicon image{
+  width: 55rpx;
+  height: 55rpx;
+}
+.content{
+  padding: 30rpx;
+  color: #616266;
+  font-size: 30rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+}

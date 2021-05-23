@@ -4,13 +4,16 @@ const southsite = require('../../config/southsite.js');
 var latitude = ''; //纬度
 var longitude = '';//经度
 var name = '';//目的地名称
+var info = '';//地点信息介绍
+var cover = '';//地点封面
+const app = getApp();
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-   
+     windowHeight: app.globalData.windowHeight*0.94, //手机高度*0.94
   },
 
   /**
@@ -26,16 +29,24 @@ Page({
         latitude = westsite.site[markerId].latitude;
         longitude = westsite.site[markerId].longitude;
         name = westsite.site[markerId].callout.content;
+        info = westsite.site[markerId].info;
+        cover= westsite.site[markerId].cover;
         this.setData({
-          name: name
+          name: name,
+          content: info,
+          cover: cover
         })
       }else{//南线
         console.log("southsite",southsite.site[markerId]);
         latitude = southsite.site[markerId].latitude;
         longitude = southsite.site[markerId].longitude;
         name = southsite.site[markerId].callout.content;
+        info = southsite.site[markerId].info;
+        cover= southsite.site[markerId].cover;
         this.setData({
-          name: name
+          name: name,
+          content: info,
+          cover: cover
         })
       }
   },

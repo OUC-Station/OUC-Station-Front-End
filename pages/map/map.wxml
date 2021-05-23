@@ -31,7 +31,7 @@ bind:change="onChange">
       style="width: 100%; height: {{ windowHeight }}px;"
       latitude="{{latitude}}"
       longitude="{{longitude}}"
-      bindtap="bindmaptap" polyline="{{polyline}}"
+      polyline="{{polyline}}"
       markers="{{markers}}"
       bindmarkertap="bindmarkertap"
     ></map>

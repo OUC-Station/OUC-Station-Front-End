@@ -104,6 +104,9 @@ const site =
          //樱花大道
          {
           id: 5,
+          cover: 'https://i.loli.net/2021/05/01/x1HvTL2ByFEmzCX.jpg',
+          info:
+          "樱花大道为中国海洋大学崂山校区五子顶西侧公路，是校园内最具特色的道路之一。每年春天樱花绽放的时节，道路旁便会开满樱花，美景宜人。有两排樱花树的树枝相连在一起，组成了一条天然的“樱花隧道”，格外抢眼。该路包括原海源南路、海源中路、敏行中路。途经南门、图书馆直到北门。",     
           iconPath: "../../images/default.png",
           latitude: 36.1635904692104,
           longitude: 120.50027829643796,
@@ -221,7 +224,67 @@ const site =
               padding: 5,  //文本边缘留白
               textAlign: 'center'  //文本对齐方式。有效值: left, right, center
             }
-          }
+          },
+           //九球广场
+           {
+            id: 11,
+            iconPath: "../../images/default.png",
+            latitude: 36.16322479303451,
+            longitude: 120.49811982677102,
+            width: 50,
+            height: 50,
+            callout: {
+              display:'ALWAYS',// 常显气泡
+              content: '九球广场',  //名称文本
+              color: '#000000',  //文本颜色
+              borderRadius: 5,  //边框圆角
+              borderWidth: 1,  //边框宽度
+              borderColor: '#ffffff',  //边框颜色
+              bgColor: '#ffffff',  //背景色
+              padding: 5,  //文本边缘留白
+              textAlign: 'center'  //文本对齐方式。有效值: left, right, center
+            }
+          },
+          //海洋科技大楼
+          {
+           id: 12,
+           iconPath: "../../images/default.png",
+           latitude: 36.16388476288154,
+           longitude: 120.4961677786165,
+           width: 50,
+           height: 50,
+           callout: {
+             display:'ALWAYS',// 常显气泡
+             content: '海洋科技大楼',  //名称文本
+             color: '#000000',  //文本颜色
+             borderRadius: 5,  //边框圆角
+             borderWidth: 1,  //边框宽度
+             borderColor: '#ffffff',  //边框颜色
+             bgColor: '#ffffff',  //背景色
+             padding: 5,  //文本边缘留白
+             textAlign: 'center'  //文本对齐方式。有效值: left, right, center
+           }
+         },
+          //孔子雕像
+          {
+           id: 13,
+           iconPath: "../../images/default.png",
+           latitude: 36.15830821844382,
+           longitude: 120.4949309462146,
+           width: 50,
+           height: 50,
+           callout: {
+             display:'ALWAYS',// 常显气泡
+             content: '孔子雕像',  //名称文本
+             color: '#000000',  //文本颜色
+             borderRadius: 5,  //边框圆角
+             borderWidth: 1,  //边框宽度
+             borderColor: '#ffffff',  //边框颜色
+             bgColor: '#ffffff',  //背景色
+             padding: 5,  //文本边缘留白
+             textAlign: 'center'  //文本对齐方式。有效值: left, right, center
+           }
+         }
     ]
 
 

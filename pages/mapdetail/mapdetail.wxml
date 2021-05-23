@@ -1,3 +1,15 @@
 <!--pages/mapdetail/mapdetail.wxml-->
-<view>{{ name }}</view>
-<button bindtap="gotoSite">到这边去</button>
+<view class="card" style="height: {{ windowHeight }}px;">
+
+<image class="cover" src="{{ cover }}">
+<view class="biaoqian">
+   <view class="name">{{ name }}</view>
+   <view class="navigateicon" bindtap="gotoSite">
+        <image src="../../images/navigate.png" mode="aspectFit" bindtap="naviback"></image>
+   </view>
+</view>
+</image>
+
+
+<view class="content">{{ content }}</view>
+</view>
