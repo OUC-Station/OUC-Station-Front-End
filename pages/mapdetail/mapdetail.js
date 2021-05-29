@@ -13,7 +13,7 @@ Page({
    * 页面的初始数据
    */
   data: {
-     windowHeight: app.globalData.windowHeight*0.94, //手机高度*0.94
+     windowHeight: app.globalData.windowHeight, //手机高度
   },
 
   /**

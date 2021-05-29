@@ -9,7 +9,7 @@ bind:change="onChange">
     <view class="page-body">
   <view class="page-section page-section-gap">
     <map
-      scale="{{ 18 }}"
+      scale="{{ 17 }}"
       id="myMap"
       style="width: 100%; height: {{ windowHeight }}px;"
       latitude="{{latitude}}"

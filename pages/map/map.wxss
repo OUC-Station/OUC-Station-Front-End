@@ -5,11 +5,3 @@
 .page-body-button {
   margin-bottom: 30rpx;
 }
-
-
-
-
-
-.tab-active-class	{
-  font-size: 16px !important;
-}

@@ -18,26 +18,26 @@ Page({
     route = event.detail.name;
    if(event.detail.name == 1){//西线
       that.setData({
-        latitude: 36.16503530159414,
-        longitude: 120.49546740029018,
+        latitude: 36.16461500000000,
+        longitude: 120.49608700000000,
         markers: westsite.site,
         polyline: [{
           points: westinfo.path,
           color: "#a885d5",
-          width: 5,
+          width: 6,
           borderColor: '#414f3e',
           borderWidth: 1
         }],
       })
    }else{ //南线
     that.setData({
-      latitude: 36.15815548604038,
-      longitude: 120.49325050010543,
+      latitude: 36.15819700000000,
+      longitude: 120.49458300000000,
       markers: southsite.site,
       polyline: [{
         points: southinfo.path,
         color: "#a885d5",
-        width: 5,
+        width: 6,
         borderColor: '#414f3e',
         borderWidth: 1
       }],
