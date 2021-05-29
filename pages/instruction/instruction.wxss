@@ -1,1 +1,44 @@
 /* pages/instruction/instruction.wxss */
+page{
+  background: #eef2fb;
+}
+.card-all{
+  padding: 30rpx;
+}
+.card-box{
+  width: 680rpx;
+  margin-left: auto;
+  margin-right: auto;
+  background: #ffffff;
+  border-radius: 10rpx;
+  box-shadow: 0 2rpx 6rpx rgba(0,0,0,0.12), 0 2rpx 4rpx rgba(0,0,0,0.24);
+}
+.title{
+  color: #333333;
+  font-size: 32rpx;
+  font-weight: bold;
+  height: 100rpx;
+  line-height: 100rpx;
+  border-bottom: 1px solid #f1f1f1;
+}
+.brief{
+  padding: 30rpx;
+  font-size: 28rpx;
+  word-wrap: break-word;
+  word-break: break-all;
+  color: #525252;
+}
+.father-title{
+  padding-left: 30rpx;
+  font-size: 36rpx;
+  color: #383838;
+  font-weight: bold;
+}
+.img-position{
+  width: 680rpx;
+  display: flex;
+  justify-content: center;
+}
+.cover{
+  width: 640rpx;
+}

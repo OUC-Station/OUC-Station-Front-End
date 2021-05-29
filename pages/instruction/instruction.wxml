@@ -1,2 +1,15 @@
 <!--pages/instruction/instruction.wxml-->
-<text>pages/instruction/instruction.wxml</text>
+<view class="card-all">
+  <view class="card-box">
+    <view class="title">“海大站”使用帮助</view>
+    <view class="brief" style=" padding-bottom: 60rpx;">“海大站”是中国海洋大学校园参观交流的官方小程序，可为公众提供校园导览、活动推送、问题交流等服务。</view>
+   <view class="father-title">校园导览介绍</view>
+   <view class="brief">校园导览是校园参观的小助手，会给您推荐适宜参观的浏览路线，提供热门景观等地点的介绍及导航，帮助您更好地参观海大。</view>
+   <view class="img-position"><image class="cover" src="https://i.loli.net/2021/05/30/dwo2xu9NYjIcmFq.jpg" mode="widthFix"></image></view>
+   <view class="brief">点击地点的图标即可查看其详细介绍。</view>
+   <view class="img-position"><image class="cover" src="https://i.loli.net/2021/05/30/WsZSBp6IGYTJRiQ.jpg" mode="widthFix"></image></view>
+   <view class="brief">点击详细介绍里的导航按钮即可使用导航到该地点的功能。</view>
+   <view class="img-position"><image class="cover" src="https://i.loli.net/2021/05/30/WdE5QplkBHVr1iG.jpg" mode="widthFix"></image></view>
+   <view class="brief" style=" padding-bottom: 60rpx;">此外，在导航页里，点击下方按钮可另外选择您想使用的导航软件进行导航。</view>
+ </view>
+  </view>
