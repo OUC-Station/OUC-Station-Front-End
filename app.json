@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/map/map",
+    "pages/instruction/instruction",
     "pages/mapdetail/mapdetail",
     "pages/index/index",
     "pages/forum/forum",
@@ -10,7 +11,6 @@
     "pages/postmsg/postmsg",
     "pages/activitydetail/activitydetail",
     "pages/phone/phone",
-    "pages/instruction/instruction",
     "pages/empower/empower",
     "pages/logs/logs"
   ],
