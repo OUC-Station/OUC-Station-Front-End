@@ -21,6 +21,8 @@ Page({
         latitude: 36.16461500000000,
         longitude: 120.49608700000000,
         markers: westsite.site,
+        rotate: 224,
+        enablerotate: true,
         polyline: [{
           points: westinfo.path,
           color: "#a885d5",
@@ -31,9 +33,11 @@ Page({
       })
    }else{ //南线
     that.setData({
-      latitude: 36.15819700000000,
-      longitude: 120.49458300000000,
+      latitude: 36.15825700000000,
+      longitude: 120.49455300000000,
       markers: southsite.site,
+      rotate: -33, //
+      enablerotate: true,//
       polyline: [{
         points: southinfo.path,
         color: "#a885d5",

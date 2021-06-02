@@ -45,7 +45,7 @@
     "minifyWXSS": true
   },
   "compileType": "miniprogram",
-  "libVersion": "2.16.1",
+  "libVersion": "2.17.0",
   "appid": "wx7d3ed7ba8cb05acf",
   "projectname": "OUC",
   "debugOptions": {

@@ -16,6 +16,8 @@ bind:change="onChange">
       longitude="{{longitude}}"
       bindtap="bindmaptap" polyline="{{polyline}}"
       markers="{{markers}}"
+      rotate="{{ rotate }}"
+      enable-rotate="{{ enablerotate }}"
       bindmarkertap="bindmarkertap"
     ></map>
   </view>
@@ -33,6 +35,8 @@ bind:change="onChange">
       longitude="{{longitude}}"
       polyline="{{polyline}}"
       markers="{{markers}}"
+      rotate="{{ rotate }}"
+      enable-rotate="{{ enablerotate }}"
       bindmarkertap="bindmarkertap"
     ></map>
   </view>
