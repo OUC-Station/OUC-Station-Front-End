@@ -49,12 +49,34 @@ Page({
 
 //输入聚焦
 focus: function (e) {
-  var that = this;
+  var userinfo = wx.getStorageSync('userinfo')//从缓存信息看用户是否授权了
+  console.log("userinfo",userinfo)
+  if(!userinfo){
+    wx.hideKeyboard({
+      success: (res) => {
+        Dialog.confirm({
+          message: '授权登录后才能发表评论，确定现在授权',
+        })
+          .then(() => {
+             wx.navigateTo({
+               url: '/pages/empower/empower',
+             })
+          })
+          .catch(() => {
+             wx.switchTab({
+               url: '/pages/center/center',
+             })
+          });
+      }
+    })
+  }else{
+    var that = this;
     that.setData({
     inputBottom: e.detail.height,
     ipheight: 78,
     isShow: true
    })
+  }
 },
 //失去聚焦
   blur: function (e) {

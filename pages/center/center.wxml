@@ -1,7 +1,8 @@
 <!--pages/center/center.wxml-->
-<image class="login-box" src="https://i.loli.net/2021/04/30/bkwCxiOsEhKl9NQ.png" ></image>
-<view wx:if="{{ isLogin }}">
-<view class="userImage1">
+<image class="login-box" src="https://i.loli.net/2021/04/30/bkwCxiOsEhKl9NQ.png" style="height: {{ windowHeight*0.42 }}px;"></image>
+ <view wx:if="{{ isLogin }}">
+<view class="userImage1" style="height: {{ windowHeight*0.42 }}px;">
+  <view  class="userImage1p">
   <image src="{{ avatar }}"></image>
   <view class="nickname">{{ nick_name }}</view>
 <view class="btn">
@@ -13,8 +14,10 @@
 </view> 
 </view> 
 </view>
+</view>
 <view wx:if="{{ !isLogin }}">
-  <view class="userImage2">
+  <view class="userImage2" style="height: {{ windowHeight*0.42 }}px;">
+    <view  class="userImage1p">
   <image src="../../images/default.png"></image>
 <view class="btn">
   <van-button 
@@ -24,6 +27,7 @@
   >登录</van-button>
 </view> 
 </view> 
+</view>
 </view>
 
 
@@ -65,5 +69,6 @@
 
 </view>
 
+<van-dialog id="van-dialog" />
 
 

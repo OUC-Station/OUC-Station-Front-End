@@ -1,6 +1,6 @@
 <!--pages/forumdetail/forumdetail.wxml-->
 <view class="container">
-  <van-dialog id="van-dialog" />
+  <van-dialog id="van-dialog"/>
 <view class="all">
 <view class="top">
 <view class="lt">

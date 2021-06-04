@@ -98,7 +98,25 @@ Page({
    */
   onLoad: function (options) {
     anonymous = !this.data.switch1;
-    console.log("anonymous: ",anonymous)
+    console.log("anonymous: ",anonymous);
+
+    var userinfo = wx.getStorageSync('userinfo')//从缓存信息看用户是否授权了
+    console.log("userinfo",userinfo)
+    if(!userinfo){
+      Dialog.confirm({
+        message: '授权登录后才能发表评论，确定现在授权',
+      })
+        .then(() => {
+           wx.navigateTo({
+             url: '/pages/empower/empower',
+           })
+        })
+        .catch(() => {
+           wx.switchTab({
+             url: '/pages/center/center',
+           })
+        });
+    }
   },
 
   /**

@@ -1,11 +1,14 @@
 // pages/center/center.js
-const app = getApp()
+const app = getApp();
+import Dialog from '@vant/weapp/dialog/dialog';
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
+     windowHeight: app.globalData.windowHeight, //手机高度
+
      isLogin: true //判断是否登录
   },
 
@@ -17,15 +20,25 @@ Page({
    
   },
   logout(){
-    this.setData({
-      isLogin: false
+    Dialog.confirm({
+      message: '确定退出登录',
     })
-    wx.removeStorageSync("cookie");
-    wx.removeStorageSync("userinfo");
-    app.globalData.is_login = false;
-    app.globalData.avatar = null;
-    app.globalData.nick_name = null;
+      .then(() => {
+        this.setData({
+          isLogin: false
+        })
+        wx.removeStorageSync("cookie");
+        wx.removeStorageSync("userinfo");
+        app.globalData.is_login = false;
+        app.globalData.avatar = null;
+        app.globalData.nick_name = null;
+      })
+      .catch(() => {
+        console.log("取消发布")
+      });
   },
+
+  
   login(){
     var that = this;
     app.login();

@@ -157,7 +157,7 @@ const site =
           id: 7,
           cover: 'https://i.loli.net/2021/05/23/QzIYLT5HrthcfER.jpg',
           info:'位于南门附近的地标建筑，是学生借阅书籍和自习的最佳去处。2007年崂山图书馆投入使用，功能布局科学，设备配置先进，自动化程度较高，馆藏纸质图书报刊文献约250万册、中外文电子书刊500余万册、数据库303个。图书馆一贯秉承“一切为了读者”的服务理念，致力于为读者提供温馨、便捷的服务。',  
-          iconPath: "https://i.loli.net/2021/06/02/xXFMHyS2BfK1GtL.png",
+          iconPath: "https://i.loli.net/2021/06/03/PEtR2hOxIWzAUTw.png",
           latitude: 36.15823549315137,
           longitude: 120.49697844312811,
           width: 50,
