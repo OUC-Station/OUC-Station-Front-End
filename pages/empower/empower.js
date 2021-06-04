@@ -1,9 +1,10 @@
 // pages/empower/empower.js
 //获取应用实例
-const app = getApp()
+const app = getApp();
 var url = app.globalData.urlPath;
 Page({
     data: {
+        windowHeight: app.globalData.windowHeight*0.57,//手机高度
         //判断小程序的API，回调，参数，组件等是否在当前版本可用。
         canIUse: wx.canIUse('button.open-type.getUserInfo'),
         isHide: true

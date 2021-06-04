@@ -1,6 +1,7 @@
 {
   "pages": [
     "pages/map/map",
+    "pages/empower/empower",
     "pages/center/center",
     "pages/instruction/instruction",
     "pages/mapdetail/mapdetail",
@@ -8,11 +9,9 @@
     "pages/forum/forum",
     "pages/feedback/feedback",
     "pages/forumdetail/forumdetail",
-    
     "pages/postmsg/postmsg",
     "pages/activitydetail/activitydetail",
     "pages/phone/phone",
-    "pages/empower/empower",
     "pages/logs/logs"
   ],
   "permission": {
