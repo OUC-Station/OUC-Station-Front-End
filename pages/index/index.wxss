@@ -4,6 +4,7 @@ page{
 /* swiper轮播组件 */
 .swiperarea{
   padding-top: 30rpx;
+  padding-bottom:30rpx;
 }
 swiper{
   margin: 0 auto;
@@ -23,20 +24,11 @@ swiper{
 }
 
 
-
-
-
-
-
-
-
-
 /* 底下活动列表那里 */
 .activities{
   width: 100%;
   height: auto;
   background: #ffffff;
-  margin-top: 100rpx;
   margin-bottom: 40rpx;
 }
 .item {
@@ -103,4 +95,16 @@ swiper{
 
 #van-toast {
   --toast-text-padding: 24rpx 36rpx
+}
+
+
+/* 返回顶部 */
+.goTop{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 50rpx;
+  opacity: 0.7;
+  right: 30rpx;
+  border-radius: 50%;
 }

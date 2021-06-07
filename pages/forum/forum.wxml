@@ -23,10 +23,13 @@
 </block>
 
 
-<button  class="add-button"  bindtap="toPost">
+<button  class="add-button"  bindtap="toPost" hidden='{{floorstatus}}' >
 <image class="add-img" src='../../images/post.png' mode="aspectFit"></image>
 </button>
 <view class="loadtip" wx:if="{{ tipShow }}">
   <van-loading size="12px">加载中...</van-loading>
 </view>
 <van-toast id="van-toast"/>
+
+
+<image class='goTop' hidden='{{!floorstatus}}' bindtap="goTop" src='../../images/top.png'></image>

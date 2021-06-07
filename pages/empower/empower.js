@@ -51,6 +51,9 @@ Page({
               console.log("拒绝授权",res);
               wx.removeStorageSync("cookie");
               wx.removeStorageSync("userinfo");
+              wx.switchTab({
+                url: '/pages/index/index',
+              })
           }
         })
     }

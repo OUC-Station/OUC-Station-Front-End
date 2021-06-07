@@ -15,6 +15,7 @@ circular="{{swiper.circular}}"
 </view>
 
 
+<van-divider dashed contentPosition="center">最新活动</van-divider>
 
 
     <view class="activities">
@@ -35,3 +36,6 @@ circular="{{swiper.circular}}"
 </view>
 <van-toast id="van-toast" />
     </view>
+
+
+<image class='goTop' hidden='{{!floorstatus}}' bindtap="goTop" src='../../images/top.png'></image>

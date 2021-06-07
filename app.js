@@ -27,7 +27,7 @@ App({
           that.is_login();
       }else{//没有缓存消息代表要授权登录
           wx.showModal({
-            title: '警告',
+            title: '提示',
             content: '不授权登录将无法正常使用小程序的所有功能，是否进行授权？',
             success: function (res) {
             if (res.confirm) {
