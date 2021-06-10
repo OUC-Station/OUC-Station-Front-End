@@ -1,5 +1,5 @@
 <!--pages/feedback/feedback.wxml-->
-<view class="title" style="padding-bottom: 20rpx;">问题类型</view>
+<view class="title" style="padding-bottom: 20rpx; margin-top: 15px;padding-top:20rpx;">问题类型</view>
 <view style="background: #ffffff;">
 <view class="top">
   <view wx:for="{{lists}}" wx:key="index">

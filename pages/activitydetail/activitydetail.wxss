@@ -56,3 +56,13 @@ page{
   word-break: break-all;
   color: #666666;
 }
+/* 返回顶部 */
+.goTop{
+  height: 80rpx;
+  width: 80rpx;
+  position: fixed;
+  bottom: 50rpx;
+  opacity: 0.7;
+  right: 30rpx;
+  border-radius: 50%;
+}

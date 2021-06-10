@@ -14,3 +14,5 @@
 <view class="content">
 <rich-text nodes="{{ content }}"></rich-text>
 </view>
+
+<image class='goTop' hidden='{{!floorstatus}}' bindtap="goTop" src='../../images/top.png'></image>
