@@ -8,9 +8,19 @@ Page({
   data: {
     active: 1,
     windowHeight: app.globalData.windowHeight, //手机高度
-    //初始定位到时候定
-    // latitude: 36.16404491277912,  //默认定位经度
-    // longitude: 120.50059948905732, //默认定位维度
+    //初始信息，以下暂时定为西线
+    latitude: 36.16461500000000,
+    longitude: 120.49608700000000,
+    markers: westsite.site,
+    rotate: 224,
+    enablerotate: true,
+    polyline: [{
+      points: westinfo.path,
+      color: "#a885d5",
+      width: 6,
+      borderColor: '#414f3e',
+      borderWidth: 1
+    }],
   },
   
   onChange(event) {

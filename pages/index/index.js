@@ -15,9 +15,10 @@ Page({
       interval:4000,
       circular:true,
       img:[
-      {index:0,src:"https://i.loli.net/2021/05/01/x1HvTL2ByFEmzCX.jpg"},
-      {index:1,src:"https://i.loli.net/2021/05/01/j2IARGSZrlohvDY.jpg"},
-      {index:2,src:"https://i.loli.net/2021/05/01/8P7WTxumOEjnKwA.jpg"}
+      {index:0,src:"https://i.loli.net/2021/06/10/DFNh4P9HJ3UyWGo.jpg"},
+      {index:1,src:"https://i.loli.net/2021/06/10/jqZbPxH7wIVNEDp.jpg"},
+      {index:2,src:"https://i.loli.net/2021/06/10/zhmqOgeRr3U8pJ6.jpg"},
+      {index:3,src:"https://i.loli.net/2021/06/10/eN9FZ1qrdKWcxXA.jpg"},
     ],
     },
     lists:[],
