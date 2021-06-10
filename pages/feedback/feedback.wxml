@@ -1,12 +1,38 @@
 <!--pages/feedback/feedback.wxml-->
+<view class="title" style="padding-bottom: 20rpx;">问题类型</view>
+<view style="background: #ffffff;">
+<view class="top">
+  <view wx:for="{{lists}}" wx:key="index">
+  <view class="tagclass" bindtap="toTag" data-id='{{item.id}}' style="color:{{ item.tagColor }};background:{{ item.bgColor}};">{{item.tagtext}}</view>
+  </view>
+</view>
+
+<view class="div-line"></view>
+
+<view class="title" style="padding-top: 20rpx;">反馈内容</view>
 <van-dialog id="van-dialog" />
 <view class="form" >
       <view class="content">
-     <textarea class="input2" type='text' maxlength='500' name="content" value="{{content}}" placeholder="请输入您宝贵的意见或建议"  placeholder-class='textInputPlaceHolder' bindinput='limitWord' show-confirm-bar="{{false}}"></textarea>
-       <text style="float: right; color:#ababab;font-size:28rpx;">{{currentWord}}/{{maxWord}}(最多可输入500字)</text>
+     <textarea class="input2" type='text' maxlength='300' name="content" value="{{content}}" placeholder="请详细描述您的问题"  placeholder-class='textInputPlaceHolder' bindinput='limitWord' show-confirm-bar="{{false}}"></textarea>
+       <text style="float: right; color:#ababab;font-size:14px;">{{currentWord}}/{{maxWord}}</text>
      </view>
  </view>
- <view class="tip">欢迎您为我们提出宝贵的意见和建议，您留下的任何信息都将用来改善我们的小程序。</view>
-<view class='btn-area1'>
-      <button class='loginBtn' hover-class="loginBtn-hover" bindtap="submit">提交反馈</button>
+
+ <van-field
+    label="联系方式"
+    value="{{ value }}"
+    placeholder="请留下您的手机号，方便我们联系您"
+    border="{{ false }}"
+    clearable="{{ true }}"
+    type="number"
+    bind:change="onChange"
+    label-class="label-class"
+    title-width="4.6em"
+    maxlength="{{ 11 }}"
+  />
+
+</view>
+
+<view class='btn-area1' style="top: {{ windowHeight*0.85}}px;">
+      <button class='loginBtn' hover-class="loginBtn-hover" disabled="{{ isSent }}" bindtap="submit">提交反馈</button>
  </view>

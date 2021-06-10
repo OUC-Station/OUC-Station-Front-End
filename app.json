@@ -1,8 +1,8 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/forum/forum",
     "pages/feedback/feedback",
+    "pages/forum/forum",
     "pages/map/map",
     "pages/empower/empower",
     "pages/center/center",

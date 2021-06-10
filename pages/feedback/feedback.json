@@ -1,6 +1,7 @@
 {
   "usingComponents": {
-    "van-dialog": "@vant/weapp/dialog/index"
+    "van-dialog": "@vant/weapp/dialog/index",
+    "van-field": "@vant/weapp/field/index"
   },
-  "navigationBarTitleText": "意见反馈箱"
+  "navigationBarTitleText": "意见反馈"
 }
