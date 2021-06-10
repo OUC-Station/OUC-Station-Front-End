@@ -3,7 +3,7 @@
     "i-switch": "../iview-weapp/dist/switch/index",
     "van-dialog": "@vant/weapp/dialog/index"
   },
-  "navigationBarBackgroundColor": "#fb6570",
+  "navigationBarBackgroundColor": "#a0887e",
   "navigationBarTextStyle": "white",
   "navigationBarTitleText": "发布疑问"
 }

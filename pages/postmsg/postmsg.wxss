@@ -40,7 +40,7 @@ button[disabled] {
   width: 85%;
   border-radius: 10rpx;
   color: #fff;
-  background-color: #f68e95;
+  background-color: #a0887e;
   font-size: 32rpx;
   letter-spacing: 5rpx;
   border: none;

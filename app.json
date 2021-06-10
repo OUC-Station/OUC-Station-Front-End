@@ -1,15 +1,15 @@
 {
   "pages": [
     "pages/index/index",
-    "pages/feedback/feedback",
-    "pages/forum/forum",
-    "pages/map/map",
     "pages/empower/empower",
+    "pages/map/map",
     "pages/center/center",
+    "pages/forum/forum",
+    "pages/feedback/feedback",
     "pages/mapdetail/mapdetail",
     "pages/forumdetail/forumdetail",
-    "pages/postmsg/postmsg",
     "pages/activitydetail/activitydetail",
+    "pages/postmsg/postmsg",
     "pages/phone/phone",
     "pages/instruction/instruction",
     "pages/logs/logs"

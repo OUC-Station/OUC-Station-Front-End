@@ -29,7 +29,7 @@ page{
   width: 94%;
   border-radius: 10rpx;
   color: #fff;
-  background-color: #46c47d;
+  background-color: #91ccee;
   font-size: 32rpx;
   letter-spacing: 5rpx;
   border: none;
